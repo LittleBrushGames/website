@@ -3,19 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Little Brush Games — Social party games</title>
-  <meta name="description" content="Little Brush Games is an indie studio in Hamburg building cozy, funny, social party games like Truth Or Mole.">
+  <title>Little Brush Games — Truth Or Mole</title>
+  <meta name="description" content="Little Brush Games is an indie studio in Hamburg building Truth Or Mole — a cozy noir social deduction party game for one phone and a table full of suspects.">
   <link rel="canonical" href="https://littlebrushgames.com/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Little Brush Games">
-  <meta property="og:description" content="Small party games with mystery, laughter, and a tiny mole.">
+  <meta property="og:title" content="Little Brush Games — Truth Or Mole">
+  <meta property="og:description" content="A cozy noir party game about truth, bluffing, and one suspicious Mole.">
   <meta property="og:url" content="https://littlebrushgames.com/">
-  <meta property="og:image" content="https://littlebrushgames.com/assets/og.svg">
+  <meta property="og:image" content="https://littlebrushgames.com/assets/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#07070c">
+  <meta name="theme-color" content="#050507">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-  <link rel="preload" href="styles.css?v=20260529" as="style">
-  <link rel="stylesheet" href="styles.css?v=20260529">
+  <link rel="preload" href="assets/hero-key-art.webp" as="image" type="image/webp">
+  <link rel="preload" href="styles.css?v=20260530" as="style">
+  <link rel="stylesheet" href="styles.css?v=20260530">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -25,7 +26,15 @@
     "logo": "https://littlebrushgames.com/assets/logo.svg",
     "email": "support@littlebrushgames.com",
     "sameAs": [],
-    "makesOffer": [{ "@type": "Offer", "itemOffered": { "@type": "VideoGame", "name": "Truth Or Mole" } }]
+    "makesOffer": [{
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "VideoGame",
+        "name": "Truth Or Mole",
+        "gamePlatform": ["iOS", "Android"],
+        "applicationCategory": "Game"
+      }
+    }]
   }
   </script>
 </head>
@@ -37,120 +46,143 @@
         <span>Little Brush Games</span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#games">Games</a>
+        <a href="#screens">Screens</a>
+        <a href="#game">Game</a>
         <a href="#studio">Studio</a>
         <a href="https://legal.littlebrushgames.com/">Legal</a>
-        <a class="btn secondary" href="mailto:support@littlebrushgames.com">Contact</a>
+        <a class="nav-cta" href="mailto:support@littlebrushgames.com">Contact</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero">
+    <section class="hero" aria-label="Truth Or Mole intro">
+      <div class="hero-art" role="img" aria-label="Friends around a noir detective party table with phones and a tiny mole mascot"></div>
+      <div class="hero-scrim"></div>
       <div class="container hero-grid">
-        <div>
-          <div class="eyebrow"><span class="dot"></span> Indie studio from Hamburg</div>
-          <h1>Games that turn a room into a story.</h1>
-          <p class="hero-copy">Little Brush Games makes social party games for friends, families, and suspiciously confident liars. Our first case: <strong>Truth Or Mole</strong>.</p>
+        <div class="hero-copy-block">
+          <div class="eyebrow"><span></span> Cozy noir party game</div>
+          <p class="kicker">One phone. One table. One Mole.</p>
+          <h1>Find the Mole before they fake the truth.</h1>
+          <p class="hero-copy">Truth Or Mole is a social deduction party game for friends and families: answer questions, read the room, and vote out the one player who is secretly improvising.</p>
           <div class="hero-actions">
-            <a class="btn primary" href="#games">Meet Truth Or Mole</a>
-            <a class="btn secondary" href="https://legal.littlebrushgames.com/privacy.html">Privacy & legal</a>
+            <a class="btn primary" href="#screens">See the vibe</a>
+            <a class="btn secondary" href="mailto:support@littlebrushgames.com?subject=Truth%20Or%20Mole">Talk to the studio</a>
           </div>
-          <div class="hero-meta" aria-label="Studio highlights">
-            <span>Mobile-first</span>
-            <span>No ads planned</span>
-            <span>Party-table tested</span>
+          <div class="proof-points" aria-label="Studio highlights">
+            <span>3–8 players</span>
+            <span>Local party play</span>
+            <span>Family & adult packs</span>
           </div>
         </div>
-        <aside class="showcase" aria-label="Truth Or Mole phone mockup">
-          <div class="phone">
-            <div class="game-card">
-              <div>
-                <div class="game-title">Truth <em>or Mole</em></div>
-                <div class="mole-face"><span class="nose"></span></div>
-              </div>
-              <div class="case-strip">
-                <div><b>Ask</b>Questions reveal tells.</div>
-                <div><b>Lie</b>The Mole hides the truth.</div>
-                <div><b>Vote</b>Find them before they escape.</div>
-              </div>
-            </div>
+
+        <aside class="hero-device" aria-label="Truth Or Mole preview screenshot">
+          <div class="device-glow"></div>
+          <div class="phone-frame">
+            <img src="assets/truth-or-mole-screen.webp" alt="Stylized preview artwork of the Truth Or Mole game screen" width="720" height="1080">
           </div>
+          <div class="floating-note note-top">Ask a question</div>
+          <div class="floating-note note-bottom">Spot the bluff</div>
         </aside>
       </div>
     </section>
 
-    <section id="studio">
+    <section id="screens" class="screens-section">
+      <div class="container">
+        <div class="section-head cinematic">
+          <div>
+            <p class="label">Visual direction</p>
+            <h2>Looks like a detective night. Plays like a party.</h2>
+          </div>
+          <p>Warm light, dark table, quick decisions. The interface stays readable while the room does the drama.</p>
+        </div>
+        <div class="screen-reel" aria-label="Truth Or Mole screen previews">
+          <figure class="screen-card tall">
+            <img src="assets/truth-or-mole-screen.webp" alt="Truth Or Mole stylized mobile gameplay preview">
+            <figcaption>Table view</figcaption>
+          </figure>
+          <figure class="screen-card question-preview">
+            <div class="mini-phone-ui">
+              <div class="ui-topline"><span></span><span></span><span></span></div>
+              <div class="question-card">
+                <small>Question</small>
+                <strong>Who is most likely to keep a secret?</strong>
+              </div>
+              <div class="answer-row"><b>Tell the truth</b><b>Act natural</b></div>
+            </div>
+            <figcaption>Question round</figcaption>
+          </figure>
+          <figure class="screen-card vote-preview">
+            <div class="vote-board">
+              <span class="suspect active">A</span>
+              <span class="suspect">B</span>
+              <span class="suspect">C</span>
+              <span class="suspect mole">?</span>
+              <p>Vote before the Mole escapes.</p>
+            </div>
+            <figcaption>Final vote</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="game" class="game-section">
+      <div class="container game-panel">
+        <div class="game-visual" aria-hidden="true">
+          <div class="poster-window"></div>
+        </div>
+        <div class="game-content">
+          <p class="label">First release</p>
+          <h2>Truth Or Mole</h2>
+          <p>A fast social deduction game where everyone answers the same prompt — except the Mole, who must improvise, observe, and survive the vote.</p>
+          <div class="feature-list">
+            <div><strong>Pass the phone</strong><span>One shared screen keeps the whole table in the same story.</span></div>
+            <div><strong>Read the room</strong><span>Answers reveal habits, tells, and beautifully suspicious confidence.</span></div>
+            <div><strong>Choose the tone</strong><span>Question packs can stay family-friendly or move into adults-only territory.</span></div>
+          </div>
+          <div class="hero-actions">
+            <a class="btn primary" href="mailto:support@littlebrushgames.com?subject=Truth%20Or%20Mole">Ask about the game</a>
+            <a class="btn secondary" href="https://legal.littlebrushgames.com/privacy.html">Privacy</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="studio" class="studio-section">
       <div class="container">
         <div class="section-head">
-          <h2 class="gradient-text">Tiny studio. Big table energy.</h2>
-          <p>We like games that create real conversation: quick to start, funny to watch, and memorable after the phone is put away.</p>
+          <div>
+            <p class="label">Little Brush Games</p>
+            <h2>Tiny studio. Big table energy.</h2>
+          </div>
+          <p>We build small, polished social games that are quick to explain, funny to watch, and memorable after the phone is put away.</p>
         </div>
         <div class="cards">
           <article class="card">
-            <div class="icon">🕵️</div>
-            <h3>Social by design</h3>
-            <p>Built for one phone, many players, and the kind of laughter that only happens when everyone is in the same room.</p>
+            <span class="card-number">01</span>
+            <h3>Social first</h3>
+            <p>Designed for people in the same room — laughter, accusations, awkward pauses, and all.</p>
           </article>
           <article class="card">
-            <div class="icon">🎨</div>
-            <h3>Hand-crafted feel</h3>
-            <p>Every pack, prompt, and interaction is tuned for rhythm, surprise, and replayable group dynamics.</p>
+            <span class="card-number">02</span>
+            <h3>Premium tiny details</h3>
+            <p>Every prompt, transition, and vote state is tuned for rhythm instead of feature bloat.</p>
           </article>
           <article class="card">
-            <div class="icon">🌙</div>
-            <h3>Calm noir style</h3>
-            <p>Dark, cozy, detective-inspired interfaces: readable on a phone at a party, polished enough to feel premium.</p>
+            <span class="card-number">03</span>
+            <h3>Clear & honest</h3>
+            <p>No ads planned, clear privacy pages, and store-friendly legal documents from day one.</p>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="games">
-      <div class="container">
-        <article class="game">
-          <div class="game-art"><div class="mole-face"><span class="nose"></span></div></div>
-          <div class="game-content">
-            <div class="eyebrow">First release</div>
-            <h2>Truth Or Mole</h2>
-            <p>A social deduction party game where everyone answers questions — except the Mole, who has to bluff, observe, and survive the vote.</p>
-            <div class="tags">
-              <span>3–8 players</span>
-              <span>Local party game</span>
-              <span>Question packs</span>
-              <span>Family & adult modes</span>
-            </div>
-            <div class="hero-actions">
-              <a class="btn primary" href="mailto:support@littlebrushgames.com?subject=Truth%20or%20Mole">Ask about the game</a>
-              <a class="btn secondary" href="https://legal.littlebrushgames.com/terms.html">Terms</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <h2>How we build.</h2>
-          <p>Small, focused, and practical — every feature has to earn its place at the table.</p>
-        </div>
-        <div class="timeline">
-          <div class="step"><h3>Prototype fast</h3><p>Test the social loop before polishing anything.</p></div>
-          <div class="step"><h3>Play together</h3><p>Watch where players laugh, hesitate, accuse, or get confused.</p></div>
-          <div class="step"><h3>Polish the phone</h3><p>Make the shared-screen experience readable, quick, and tactile.</p></div>
-          <div class="step"><h3>Ship honestly</h3><p>Clear rules, clear privacy, and no dark patterns.</p></div>
         </div>
       </div>
     </section>
 
     <section class="cta">
-      <div class="container">
-        <div class="cta-box">
-          <h2>Want to talk games?</h2>
-          <p>Questions, press, store review, support, or collaboration — send us a note.</p>
-          <a class="btn primary" href="mailto:support@littlebrushgames.com">support@littlebrushgames.com</a>
-        </div>
+      <div class="container cta-box">
+        <p class="label">Press, support, store review, collaboration</p>
+        <h2>Want to talk games?</h2>
+        <p>Send a note to Little Brush Games in Hamburg.</p>
+        <a class="btn primary" href="mailto:support@littlebrushgames.com">support@littlebrushgames.com</a>
       </div>
     </section>
   </main>
@@ -158,7 +190,7 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div>© 2026 Little Brush Games. Made in Hamburg.</div>
-      <div>
+      <div class="footer-links">
         <a href="https://legal.littlebrushgames.com/privacy.html">Privacy</a>
         <a href="https://legal.littlebrushgames.com/terms.html">Terms</a>
         <a href="https://legal.littlebrushgames.com/imprint.html">Imprint</a>
