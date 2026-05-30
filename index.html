@@ -15,8 +15,9 @@
   <meta name="theme-color" content="#fff3d8">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <link rel="preload" href="assets/playful-hero.webp" as="image" type="image/webp">
-  <link rel="preload" href="styles.css?v=20260530-research" as="style">
-  <link rel="stylesheet" href="styles.css?v=20260530-research">
+  <link rel="preload" href="assets/screenshots/tom-start-screen.webp" as="image" type="image/webp">
+  <link rel="preload" href="styles.css?v=20260530-screenshots" as="style">
+  <link rel="stylesheet" href="styles.css?v=20260530-screenshots">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -137,27 +138,45 @@
       </div>
     </section>
 
-    <section id="screens" class="game-preview" aria-label="Game screen preview">
-      <div class="container preview-grid">
-        <div class="phone-card">
-          <div class="phone-top"></div>
-          <div class="app-screen">
-            <div class="round-label">Round 4 · Vote soon</div>
-            <h2>Who would hide a secret for the longest?</h2>
-            <div class="player-row" aria-label="Players"><span>Mia</span><span>Alex</span><span>Kai</span><span>?</span></div>
-            <button type="button">Reveal answers</button>
+    <section id="screens" class="screens-section" aria-label="Gameplay screenshots">
+      <div class="container">
+        <div class="section-head screens-head">
+          <div>
+            <p class="label">Real app screenshots</p>
+            <h2>The actual game already has the right suspicious energy.</h2>
           </div>
+          <p>Current build captures: start the game, set up players, reveal secret roles, answer questions, and pass the phone around the table.</p>
         </div>
-        <div class="preview-copy">
-          <p class="label">Game screen feel</p>
-          <h2>Big readable cards, chunky votes, and zero spreadsheet energy.</h2>
-          <p>The shared phone stays simple and readable, so players can focus on tells, reactions, and ridiculous explanations.</p>
-          <div class="mini-features">
-            <span>🎲 quick setup</span>
-            <span>🕵️ secret role</span>
-            <span>😂 replayable prompts</span>
-            <span>📱 pass-and-play</span>
-          </div>
+
+        <div class="screenshot-gallery" aria-label="Truth Or Mole screenshot gallery">
+          <figure class="screenshot-card featured">
+            <img src="assets/screenshots/tom-start-screen.webp" alt="Truth Or Mole start screen with Start Game and How to play buttons" width="720" height="1457" loading="eager">
+            <figcaption>Start screen</figcaption>
+          </figure>
+          <figure class="screenshot-card">
+            <img src="assets/screenshots/tom-game-setup.webp" alt="Game setup screen with players and selected question packs" width="720" height="1457" loading="eager">
+            <figcaption>Setup players & packs</figcaption>
+          </figure>
+          <figure class="screenshot-card accent-red">
+            <img src="assets/screenshots/tom-role-mole.webp" alt="Secret role screen saying You are the mole" width="720" height="1457" loading="eager">
+            <figcaption>Secret Mole reveal</figcaption>
+          </figure>
+          <figure class="screenshot-card accent-green">
+            <img src="assets/screenshots/tom-role-not-mole.webp" alt="Secret role screen saying You are not the mole" width="720" height="1457" loading="eager">
+            <figcaption>Honest player reveal</figcaption>
+          </figure>
+          <figure class="screenshot-card">
+            <img src="assets/screenshots/tom-question-screen.webp" alt="Question round screen with Nicole answering a prompt" width="720" height="1457" loading="eager">
+            <figcaption>Question round</figcaption>
+          </figure>
+        </div>
+
+        <div class="screenshot-notes" aria-label="Gameplay highlights">
+          <span>🎲 Quick setup</span>
+          <span>🕵️ Secret roles</span>
+          <span>🙈 Private reveal</span>
+          <span>💬 Big readable prompts</span>
+          <span>📱 Pass-and-play flow</span>
         </div>
       </div>
     </section>
