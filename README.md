@@ -1,6 +1,6 @@
 # Little Brush Games website
 
-Static company website for **Little Brush Games** and **Truth Or Mole**. Built as plain HTML/CSS for GitHub Pages, with generated visual assets in `assets/`.
+Static playful game website for **Little Brush Games** and **Truth Or Mole**. Built as plain HTML/CSS for GitHub Pages, with generated hero/mascot assets in `assets/`.
 
 ## Local preview
 
