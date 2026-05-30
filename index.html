@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Truth Or Mole — Little Brush Games</title>
-  <meta name="description" content="Truth Or Mole is a bright mobile party game from Little Brush Games: one phone, funny questions, secret bluffing, and a very suspicious mole.">
+  <meta name="description" content="Truth Or Mole is a mobile party game from Little Brush Games: one phone, funny questions, secret bluffing, and one very suspicious mole.">
   <link rel="canonical" href="https://littlebrushgames.com/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Truth Or Mole — Little Brush Games">
@@ -15,8 +15,8 @@
   <meta name="theme-color" content="#fff3d8">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <link rel="preload" href="assets/playful-hero.webp" as="image" type="image/webp">
-  <link rel="preload" href="styles.css?v=20260530-game" as="style">
-  <link rel="stylesheet" href="styles.css?v=20260530-game">
+  <link rel="preload" href="styles.css?v=20260530-research" as="style">
+  <link rel="stylesheet" href="styles.css?v=20260530-research">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,17 +40,19 @@
 </head>
 <body>
   <header class="site-header">
+    <div class="top-ribbon">🚧 In development · iOS & Android planned · no ads planned</div>
     <div class="container navbar">
       <a class="brand" href="#top" aria-label="Little Brush Games home">
         <img src="assets/logo.svg" alt="" width="40" height="40">
         <span>Little Brush Games</span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#how">How it plays</a>
+        <a href="#how">How to play</a>
+        <a href="#screens">Screens</a>
         <a href="#packs">Packs</a>
-        <a href="#studio">Studio</a>
+        <a href="#faq">FAQ</a>
         <a href="https://legal.littlebrushgames.com/">Legal</a>
-        <a class="nav-cta" href="mailto:support@littlebrushgames.com">Contact</a>
+        <a class="nav-cta" href="mailto:support@littlebrushgames.com?subject=Truth%20Or%20Mole%20updates">Get updates</a>
       </nav>
     </div>
   </header>
@@ -59,18 +61,22 @@
     <section class="hero" aria-label="Truth Or Mole intro">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="sticker">🐾 Party game in progress</div>
-          <h1>Can your friends spot the Mole?</h1>
-          <p class="lead">A bright social deduction game for one phone and a table full of suspects. Answer silly questions, bluff when you must, and vote before the Mole gets away.</p>
+          <div class="game-logo" aria-label="Truth Or Mole">
+            <span>Truth</span>
+            <span>Or</span>
+            <span>Mole</span>
+          </div>
+          <p class="sticker">🐾 Social deduction party game</p>
+          <h1>Find the Mole before the table bursts out laughing.</h1>
+          <p class="lead">One shared phone. A stack of funny questions. Everyone answers — except the Mole, who has to bluff their way through the round.</p>
           <div class="hero-actions">
             <a class="btn primary" href="#how">How it plays</a>
-            <a class="btn secondary" href="mailto:support@littlebrushgames.com?subject=Truth%20Or%20Mole">Ask about the game</a>
+            <a class="btn secondary" href="mailto:support@littlebrushgames.com?subject=Truth%20Or%20Mole%20launch%20updates">Get launch updates</a>
           </div>
-          <div class="quick-facts" aria-label="Game highlights">
-            <span>3–8 players</span>
-            <span>One phone</span>
-            <span>Fast rounds</span>
-            <span>Family & 18+ packs</span>
+          <div class="store-row" aria-label="Availability">
+            <span class="store-pill"> iOS planned</span>
+            <span class="store-pill">▶ Android planned</span>
+            <span class="store-pill light">No accounts required</span>
           </div>
         </div>
 
@@ -85,52 +91,72 @@
       </div>
     </section>
 
+    <section class="glance-section" aria-label="At a glance">
+      <div class="container glance-grid">
+        <div><strong>3–8</strong><span>players</span></div>
+        <div><strong>1</strong><span>shared phone</span></div>
+        <div><strong>5–10</strong><span>minute rounds</span></div>
+        <div><strong>0</strong><span>ads planned</span></div>
+      </div>
+    </section>
+
     <section id="how" class="how-section">
       <div class="container">
         <div class="section-head centered">
-          <p class="label">How it plays</p>
-          <h2>Simple rules, instant accusations.</h2>
-          <p>Truth Or Mole should feel more like a board-game night than a form on a phone: big buttons, colorful cards, and quick table drama.</p>
+          <p class="label">How to play</p>
+          <h2>It should take longer to accuse someone than to learn the rules.</h2>
+          <p>Choose a pack, pass the phone, answer prompts, accuse loudly, and reveal who was bluffing.</p>
         </div>
-        <div class="play-steps">
-          <article class="step-card ask">
+        <div class="play-steps five">
+          <article class="step-card choose">
             <span class="step-number">1</span>
-            <h3>Ask</h3>
-            <p>Everyone gets a prompt. Most players answer honestly.</p>
+            <h3>Choose</h3>
+            <p>Pick a pack: family-friendly, friends night, or adults-only.</p>
+          </article>
+          <article class="step-card pass">
+            <span class="step-number">2</span>
+            <h3>Pass</h3>
+            <p>One phone goes around the table. No extra installs for everyone.</p>
+          </article>
+          <article class="step-card ask">
+            <span class="step-number">3</span>
+            <h3>Answer</h3>
+            <p>Most players tell the truth. The Mole quietly gets creative.</p>
           </article>
           <article class="step-card bluff">
-            <span class="step-number">2</span>
-            <h3>Bluff</h3>
-            <p>The Mole sees the room, invents a believable answer, and tries not to panic.</p>
+            <span class="step-number">4</span>
+            <h3>Accuse</h3>
+            <p>Read the room, interrogate friends, and enjoy the suspicious confidence.</p>
           </article>
           <article class="step-card vote">
-            <span class="step-number">3</span>
-            <h3>Vote</h3>
-            <p>Point fingers, argue loudly, then choose the player who sounds suspicious.</p>
+            <span class="step-number">5</span>
+            <h3>Reveal</h3>
+            <p>Vote, reveal the Mole, celebrate or immediately demand a rematch.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="game-preview" aria-label="Game screen preview">
+    <section id="screens" class="game-preview" aria-label="Game screen preview">
       <div class="container preview-grid">
         <div class="phone-card">
           <div class="phone-top"></div>
           <div class="app-screen">
-            <div class="round-label">Round 4</div>
+            <div class="round-label">Round 4 · Vote soon</div>
             <h2>Who would hide a secret for the longest?</h2>
-            <div class="player-row"><span>Mia</span><span>Alex</span><span>Kai</span><span>?</span></div>
+            <div class="player-row" aria-label="Players"><span>Mia</span><span>Alex</span><span>Kai</span><span>?</span></div>
             <button type="button">Reveal answers</button>
           </div>
         </div>
         <div class="preview-copy">
-          <p class="label">Mobile-first</p>
-          <h2>Designed to be readable from across the table.</h2>
-          <p>Large question cards, chunky vote buttons, and playful feedback keep the energy in the room instead of trapping everyone in menus.</p>
+          <p class="label">Game screen feel</p>
+          <h2>Big readable cards, chunky votes, and zero spreadsheet energy.</h2>
+          <p>The shared phone stays simple and readable, so players can focus on tells, reactions, and ridiculous explanations.</p>
           <div class="mini-features">
             <span>🎲 quick setup</span>
             <span>🕵️ secret role</span>
             <span>😂 replayable prompts</span>
+            <span>📱 pass-and-play</span>
           </div>
         </div>
       </div>
@@ -143,24 +169,66 @@
             <p class="label">Question packs</p>
             <h2>Pick the chaos level.</h2>
           </div>
-          <p>Same core game, different table mood. Keep it cozy, raise the stakes, or switch to adults-only packs when appropriate.</p>
+          <p>Family-friendly and adults-only prompts are separated by pack selection, so the group can choose the right mood before a round starts.</p>
         </div>
         <div class="pack-grid">
           <article class="pack-card family">
             <div class="pack-icon">🌈</div>
             <h3>Family table</h3>
-            <p>Friendly questions for mixed groups, kids, and low-stakes laughter.</p>
+            <p>Clean prompts for mixed-age groups, dinners, and low-stakes laughter.</p>
           </article>
           <article class="pack-card friends">
             <div class="pack-icon">🎉</div>
             <h3>Friends night</h3>
-            <p>More daring prompts, stronger opinions, and plenty of suspicious confidence.</p>
+            <p>Sharper questions, stronger opinions, and a lot more suspicious confidence.</p>
           </article>
           <article class="pack-card adult">
             <div class="pack-icon">🌶️</div>
             <h3>Adults only</h3>
             <p>Clearly separated mature packs for groups that choose a spicier game night.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="party-section">
+      <div class="container party-grid">
+        <div class="party-copy">
+          <p class="label">Why it works at parties</p>
+          <h2>Less setup. More “wait, what did you just say?”</h2>
+        </div>
+        <div class="party-list">
+          <div><strong>No rules lecture</strong><span>Guests understand the loop after one example.</span></div>
+          <div><strong>One phone, many players</strong><span>Perfect for couch, dinner table, trips, and house parties.</span></div>
+          <div><strong>Built-in replayability</strong><span>Different packs change the mood without changing the core game.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+      <div class="container faq-grid">
+        <div>
+          <p class="label">FAQ</p>
+          <h2>Still suspicious?</h2>
+          <p>Quick answers for players, parents, reviewers, and suspicious friends.</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Do all players need the app?</summary>
+            <p>No. Truth Or Mole is designed around one shared phone passed around the table.</p>
+          </details>
+          <details>
+            <summary>Is it family-friendly?</summary>
+            <p>It can be. Family-friendly and adults-only content should be separated by pack selection.</p>
+          </details>
+          <details>
+            <summary>Will there be ads?</summary>
+            <p>No ads are planned. The current direction is a clean party-game experience.</p>
+          </details>
+          <details>
+            <summary>Where can I get it?</summary>
+            <p>iOS and Android are planned. For now, contact Little Brush Games for updates.</p>
+          </details>
         </div>
       </div>
     </section>
