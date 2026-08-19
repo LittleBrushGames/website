@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Play Truth or Mole — Little Brush Games</title>
+  <meta name="description" content="Open Truth or Mole on Google Play for Android.">
+  <meta name="robots" content="noindex,follow">
+  <meta name="theme-color" content="#070b13">
+  <link rel="icon" href="../assets/truth-or-mole-icon.webp" type="image/webp">
+  <link rel="stylesheet" href="../styles.css?v=20260819-7">
+</head>
+<body>
+  <main class="route-page">
+    <section class="route-card" aria-labelledby="route-title">
+      <img class="route-logo" src="../assets/truth-or-mole-icon.webp" width="512" height="512" alt="">
+      <p class="eyebrow">Truth or Mole</p>
+      <h1 id="route-title">Open the first case.</h1>
+      <p id="route-status">Truth or Mole is available now for Android. If Google Play does not open automatically, use the button below.</p>
+      <div class="route-actions">
+        <a class="button" id="play-link" href="https://play.google.com/store/apps/details?id=com.littlebrushgames.truthormole">Continue to Google Play</a>
+        <a class="text-link" href="../">Learn about the game</a>
+      </div>
+      <div class="route-help">
+        Using an iPhone? The iOS version is not currently available.
+        <a href="mailto:hello@littlebrushgames.com?subject=Truth%20or%20Mole%20for%20iOS">Tell us you want it →</a>
+      </div>
+    </section>
+  </main>
+  <script>
+    (() => {
+      const baseUrl = "https://play.google.com/store/apps/details?id=com.littlebrushgames.truthormole";
+      const query = new URLSearchParams(window.location.search);
+      const campaignKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+      const campaign = campaignKeys
+        .filter((key) => query.has(key))
+        .map((key) => `${key}=${query.get(key)}`)
+        .join("&");
+      const target = new URL(baseUrl);
+
+      if (campaign) target.searchParams.set("referrer", campaign);
+
+      const targetUrl = target.toString();
+      document.getElementById("play-link").href = targetUrl;
+
+      const isAndroid = /Android/i.test(navigator.userAgent);
+      const redirectDisabled = query.get("no_redirect") === "1";
+      if (isAndroid && !redirectDisabled) {
+        document.getElementById("route-status").textContent = "Opening Truth or Mole on Google Play…";
+        window.setTimeout(() => window.location.replace(targetUrl), 350);
+      }
+    })();
+  </script>
+</body>
+</html>
