@@ -8,7 +8,7 @@
   <meta name="robots" content="noindex,follow">
   <meta name="theme-color" content="#070b13">
   <link rel="icon" href="../assets/truth-or-mole-icon.webp" type="image/webp">
-  <link rel="stylesheet" href="../styles.css?v=20260819-7">
+  <link rel="stylesheet" href="../styles.css?v=20260819-12">
 </head>
 <body>
   <main class="route-page">
@@ -19,11 +19,11 @@
       <p id="route-status">Truth or Mole is available now for Android. If Google Play does not open automatically, use the button below.</p>
       <div class="route-actions">
         <a class="button" id="play-link" href="https://play.google.com/store/apps/details?id=com.littlebrushgames.truthormole">Continue to Google Play</a>
-        <a class="text-link" href="../">Learn about the game</a>
+        <a class="text-link" id="home-link" href="../">Learn about the game</a>
       </div>
       <div class="route-help">
-        Using an iPhone? The iOS version is not currently available.
-        <a href="mailto:hello@littlebrushgames.com?subject=Truth%20or%20Mole%20for%20iOS">Tell us you want it →</a>
+        <span id="route-help-text">Using an iPhone? The iOS version is not currently available.</span>
+        <a id="ios-link" href="mailto:hello@littlebrushgames.com?subject=Truth%20or%20Mole%20for%20iOS">Tell us you want it →</a>
       </div>
     </section>
   </main>
@@ -31,6 +31,57 @@
     (() => {
       const baseUrl = "https://play.google.com/store/apps/details?id=com.littlebrushgames.truthormole";
       const query = new URLSearchParams(window.location.search);
+      const requestedLanguage = query.get("lang");
+      const browserLanguage = navigator.language.slice(0, 2);
+      const supportedLanguages = ["en", "de", "ru"];
+      const language = supportedLanguages.includes(requestedLanguage)
+        ? requestedLanguage
+        : (supportedLanguages.includes(browserLanguage) ? browserLanguage : "en");
+      const copy = {
+        en: {
+          title: "Play Truth or Mole — Little Brush Games",
+          heading: "Open the first case.",
+          status: "Truth or Mole is available now for Android. If Google Play does not open automatically, use the button below.",
+          opening: "Opening Truth or Mole on Google Play…",
+          button: "Continue to Google Play",
+          home: "Learn about the game",
+          homeUrl: "../",
+          help: "Using an iPhone? The iOS version is not currently available.",
+          ios: "Tell us you want it →"
+        },
+        de: {
+          title: "Truth or Mole spielen — Little Brush Games",
+          heading: "Den ersten Fall öffnen.",
+          status: "Truth or Mole ist jetzt für Android erhältlich. Falls Google Play nicht automatisch geöffnet wird, nutzt die Schaltfläche unten.",
+          opening: "Truth or Mole wird bei Google Play geöffnet…",
+          button: "Weiter zu Google Play",
+          home: "Mehr über das Spiel",
+          homeUrl: "../de/",
+          help: "Auf einem iPhone? Eine iOS-Version ist derzeit nicht verfügbar.",
+          ios: "Gebt uns Bescheid →"
+        },
+        ru: {
+          title: "Играть в Truth or Mole — Little Brush Games",
+          heading: "Откройте первое дело.",
+          status: "Truth or Mole уже доступна на Android. Если Google Play не открылся автоматически, нажмите кнопку ниже.",
+          opening: "Открываем Truth or Mole в Google Play…",
+          button: "Перейти в Google Play",
+          home: "Подробнее об игре",
+          homeUrl: "../ru/",
+          help: "Используете iPhone? Версии для iOS пока нет.",
+          ios: "Дайте нам знать →"
+        }
+      }[language];
+
+      document.documentElement.lang = language;
+      document.title = copy.title;
+      document.getElementById("route-title").textContent = copy.heading;
+      document.getElementById("route-status").textContent = copy.status;
+      document.getElementById("play-link").textContent = copy.button;
+      document.getElementById("home-link").textContent = copy.home;
+      document.getElementById("home-link").href = copy.homeUrl;
+      document.getElementById("route-help-text").textContent = copy.help;
+      document.getElementById("ios-link").textContent = copy.ios;
       const campaignKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
       const campaign = campaignKeys
         .filter((key) => query.has(key))
@@ -46,7 +97,7 @@
       const isAndroid = /Android/i.test(navigator.userAgent);
       const redirectDisabled = query.get("no_redirect") === "1";
       if (isAndroid && !redirectDisabled) {
-        document.getElementById("route-status").textContent = "Opening Truth or Mole on Google Play…";
+        document.getElementById("route-status").textContent = copy.opening;
         window.setTimeout(() => window.location.replace(targetUrl), 350);
       }
     })();

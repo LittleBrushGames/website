@@ -185,6 +185,30 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .footer a:hover,
 .text-link:hover { color: var(--gold); }
 
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(15, 21, 34, 0.78);
+}
+
+.language-switcher a {
+  min-width: 34px;
+  padding: 5px 8px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 850;
+  line-height: 1;
+  text-align: center;
+}
+
+.language-switcher a:hover { color: var(--paper); }
+.language-switcher a[aria-current="page"] { background: var(--paper); color: var(--ink); }
+
 .button {
   position: relative;
   overflow: hidden;
@@ -520,6 +544,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 /* Press kit */
 .subpage-body { background: var(--bg); }
 .subpage-header { border-bottom: 1px solid var(--line); }
+.subpage-header .language-switcher { margin-left: auto; }
 .subpage-hero { padding-block: 86px 64px; }
 .subpage-hero h1 { max-width: 850px; font-size: clamp(42px, 7vw, 86px); }
 .subpage-hero > p:not(.eyebrow):not(.press-revision) { max-width: 760px; margin: 24px 0 0; color: var(--muted); font-size: 20px; }
@@ -639,7 +664,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 @media (max-width: 1040px) {
   .nav-links { display: none; }
-  .nav .button { margin-left: auto; }
+  .language-switcher { margin-left: auto; }
   .game-spotlight-inner { grid-template-columns: minmax(0, 1fr) 290px; gap: 46px; }
   .game-device { width: 290px; }
   .studio-hero-dock { grid-template-columns: 1fr; gap: 18px; }
@@ -653,6 +678,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   :root { --shell: min(100% - 30px, 1180px); --radius: 20px; }
   .release-strip { font-size: 10px; }
   .nav { min-height: 68px; }
+  .subpage-header .back-link { display: none; }
   .brand { font-size: 11px; }
   .brand-mark { width: 34px; height: 34px; }
   .button-small { padding-inline: 13px; }
@@ -697,7 +723,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 @media (max-width: 520px) {
   .brand span:last-child { max-width: 105px; white-space: normal; line-height: 1.05; }
-  .nav .button { min-height: 40px; font-size: 10px; }
+  .nav > .button { display: none; }
+  .language-switcher a { min-width: 30px; padding-inline: 6px; }
   .game-hook { font-size: 35px; }
   .hero-lede { font-size: 16px; }
   .fact-list li { padding: 13px 10px; }

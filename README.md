@@ -4,9 +4,9 @@ Static product and studio website for **Little Brush Games** and **Truth or Mole
 
 Key routes:
 
-- `/` — studio-first homepage with Truth or Mole as the first released game.
-- `/play/` — stable campaign link that preserves UTM values in the Google Play Install Referrer.
-- `/press-kit.html` — verified facts, approved copy, and downloadable media assets.
+- `/`, `/de/`, `/ru/` — localized studio-first homepages with Truth or Mole as the first released game.
+- `/play/` — stable campaign link that preserves UTM values in the Google Play Install Referrer. Use `?lang=en`, `?lang=de`, or `?lang=ru` to set its interface language explicitly.
+- `/press-kit.html`, `/de/press-kit.html`, `/ru/press-kit.html` — localized verified facts, approved copy, and downloadable media assets.
 
 ## Local preview
 
@@ -17,6 +17,12 @@ python3 -m http.server 8765
 Then open <http://127.0.0.1:8765>.
 
 Append `?no_redirect=1` to `/play/` when testing the route on Android without leaving the local page.
+
+## Localization
+
+English is the source copy. Keep the homepage and press-kit structure synchronized across `en`, `de`, and `ru`, including reciprocal `hreflang` links and sitemap entries. Studio and product names, plus the canonical slogan `Playful games. Better together.`, remain untranslated.
+
+The `/play/` route uses an explicit `lang` query first, then the browser language, with English as the fallback. Legal pages are maintained separately in the `LittleBrushGames/legal` repository and should not be translated as ordinary marketing copy.
 
 ## Asset source of truth
 
