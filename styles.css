@@ -537,7 +537,7 @@ html[lang="ru"] .route-card h1 {
 .footer { padding-block: 48px; border-top: 1px solid rgba(0,0,0,0.2); background: #02040a; color: var(--muted); }
 .footer-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 26px 50px; align-items: center; }
 .footer nav { display: flex; justify-content: flex-end; gap: 24px; font-size: 14px; }
-.footer .social-links { grid-column: 1 / -1; justify-content: center; flex-wrap: wrap; gap: 12px; padding-top: 20px; border-top: 1px solid var(--line); }
+.footer .social-links { position: fixed; top: 50%; right: 18px; z-index: 40; flex-direction: column; justify-content: center; gap: 8px; padding: 10px; transform: translateY(-50%); border: 1px solid rgba(241, 199, 91, 0.22); border-radius: 999px; background: rgba(2, 4, 10, 0.86); box-shadow: 0 16px 42px rgba(0, 0, 0, 0.42); backdrop-filter: blur(14px); }
 .footer .social-links a { --social-icon: none; width: 46px; height: 46px; display: grid; place-items: center; border: 1px solid rgba(241, 199, 91, 0.3); border-radius: 50%; background: rgba(255, 255, 255, 0.035); color: var(--paper); font-size: 0; transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, color 160ms ease; }
 .footer .social-links a::before { width: 21px; height: 21px; content: ""; background: currentColor; -webkit-mask: var(--social-icon) center / contain no-repeat; mask: var(--social-icon) center / contain no-repeat; }
 .footer .social-links a:hover { transform: translateY(-3px); border-color: var(--gold); background: var(--gold); color: var(--ink); }
@@ -724,6 +724,8 @@ html[lang="ru"] .route-card h1 {
   .final-cta img { width: 76px; border-radius: 19px; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer nav { justify-content: flex-start; flex-wrap: wrap; }
+  .footer .social-links { top: auto; right: auto; bottom: max(12px, env(safe-area-inset-bottom)); left: 50%; flex-direction: row; flex-wrap: nowrap; gap: 7px; padding: 8px; transform: translateX(-50%); }
+  .footer .social-links a { width: 40px; height: 40px; }
   .footer .copyright { text-align: left; }
   .press-layout { grid-template-columns: 1fr; gap: 45px; }
   .press-sidebar { position: static; }
