@@ -538,8 +538,8 @@ html[lang="ru"] .route-card h1 {
 .footer-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 26px 50px; align-items: center; }
 .footer nav { display: flex; justify-content: flex-end; gap: 24px; font-size: 14px; }
 .footer .social-links { position: fixed; top: 50%; right: 18px; z-index: 40; flex-direction: column; justify-content: center; gap: 8px; padding: 10px; transform: translateY(-50%); border: 1px solid rgba(241, 199, 91, 0.22); border-radius: 999px; background: rgba(2, 4, 10, 0.86); box-shadow: 0 16px 42px rgba(0, 0, 0, 0.42); backdrop-filter: blur(14px); }
-.footer .social-links a { width: 46px; height: 46px; display: grid; place-items: center; border: 1px solid rgba(241, 199, 91, 0.3); border-radius: 50%; background: rgba(255, 255, 255, 0.035); font-size: 0; transition: transform 160ms ease, border-color 160ms ease, background 160ms ease; }
-.footer .social-links a::before { display: block; width: 21px; height: 21px; content: ""; background-position: center; background-repeat: no-repeat; background-size: contain; filter: invert(93%) sepia(11%) saturate(871%) hue-rotate(347deg) brightness(102%) contrast(90%); }
+.footer .social-links a { position: relative; width: 46px; height: 46px; display: grid; place-items: center; border: 1px solid rgba(241, 199, 91, 0.3); border-radius: 50%; background: rgba(255, 255, 255, 0.035); font-size: 0; transition: transform 160ms ease, border-color 160ms ease, background 160ms ease; }
+.footer .social-links a::before { position: absolute; top: 50%; left: 50%; display: block; width: 21px; height: 21px; content: ""; transform: translate(-50%, -50%); background-position: center; background-repeat: no-repeat; background-size: contain; filter: invert(93%) sepia(11%) saturate(871%) hue-rotate(347deg) brightness(102%) contrast(90%); }
 .footer .social-links a:hover { transform: translateY(-3px); border-color: var(--gold); background: rgba(241, 199, 91, 0.14); }
 .footer .social-links a[href*="youtube.com"]::before { background-image: url("assets/social-icons/youtube.svg"); }
 .footer .social-links a[href*="tiktok.com"]::before { background-image: url("assets/social-icons/tiktok.svg"); }
