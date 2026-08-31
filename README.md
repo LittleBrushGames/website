@@ -5,6 +5,7 @@ Static product and studio website for **Little Brush Games** and **Truth or Mole
 Key routes:
 
 - `/`, `/de/`, `/ru/` — localized studio-first homepages with Truth or Mole as the first released game.
+- `/truth-or-mole/`, `/de/truth-or-mole/`, `/ru/truth-or-mole/` — localized player-facing product pages for Truth or Mole.
 - `/play/` — stable campaign link that preserves UTM values in the Google Play Install Referrer. Use `?lang=en`, `?lang=de`, or `?lang=ru` to set its interface language explicitly.
 - `/press-kit.html`, `/de/press-kit.html`, `/ru/press-kit.html` — localized verified facts, approved copy, and downloadable media assets.
 

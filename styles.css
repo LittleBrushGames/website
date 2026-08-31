@@ -356,6 +356,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .game-spotlight-copy { max-width: 640px; }
 
+.product-title-badge { width: min(330px, 100%); height: auto; margin: 0 0 24px; filter: drop-shadow(8px 12px 18px rgba(0, 0, 0, 0.42)); }
+
 .product-label { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; }
 .product-label img { width: 58px; border: 1px solid rgba(241, 199, 91, 0.46); border-radius: 14px; box-shadow: 5px 7px 0 rgba(126, 23, 25, 0.56); }
 .product-label .eyebrow { margin: 0; }
@@ -547,6 +549,7 @@ html[lang="ru"] .route-card h1 {
 .footer { padding-block: 48px; border-top: 1px solid rgba(0,0,0,0.2); background: #02040a; color: var(--muted); }
 .footer-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 26px 50px; align-items: center; }
 .footer nav { display: flex; justify-content: flex-end; gap: 24px; font-size: 14px; }
+.footer .social-links { grid-column: 1 / -1; justify-content: center; flex-wrap: wrap; padding-top: 20px; border-top: 1px solid var(--line); }
 .footer p { margin: 0; }
 .footer .copyright { text-align: right; font-size: 13px; }
 
@@ -701,6 +704,7 @@ html[lang="ru"] .route-card h1 {
   .game-spotlight { min-height: 0; }
   .game-spotlight-inner { min-height: 0; grid-template-columns: 1fr; gap: 52px; padding-block: 70px; }
   .game-device { order: -1; width: min(270px, 82vw); }
+  .product-page .game-device { order: 0; }
   .hero-actions { align-items: stretch; flex-direction: column; }
   .hero-actions .text-link { text-align: center; }
   .fact-list { grid-template-columns: repeat(2, 1fr); }

@@ -27,8 +27,15 @@ $icon = Join-Path $downloads 'truth-or-mole-icon-512.png'
 $studioAvatar = Join-Path $brandRepo 'docs\marketing\social-registration-kit\shared\little-brush-games-avatar-1024.png'
 $studioHeader = Join-Path $brandRepo 'docs\marketing\social-registration-kit\source\generated\youtube-banner-imagegen-v7-safe-zoomout-upscaled-4x.png'
 $websiteStartScreenSource = Join-Path $brandRepo 'docs\marketing\website\runs\2026-08-19-product-screen-v2\raw\truth-or-mole_start-screen_en.png'
+$localizedIdentity = Join-Path $brandRepo 'docs\marketing\social-media\runs\2026-08-23-localized-title-badge-v3\final'
+$titleBadgeSource = Join-Path $localizedIdentity 'truth-or-mole_title-badge_1200.png'
+$titleBadgeEnSource = Join-Path $localizedIdentity 'truth-or-mole_title-badge_en_1600.png'
+$titleBadgeRuSource = Join-Path $localizedIdentity 'truth-or-mole_title-badge_ru_1600.png'
+$productLockupSource = Join-Path $localizedIdentity 'truth-or-mole_product-lockup_horizontal_2000x900.png'
+$productLockupEnSource = Join-Path $localizedIdentity 'truth-or-mole_product-lockup_horizontal_en_2000x900.png'
+$productLockupRuSource = Join-Path $localizedIdentity 'truth-or-mole_product-lockup_horizontal_ru_2000x900.png'
 
-foreach ($required in @($landscapeSource, $squareSource, $portraitSource, $storySource, $cleanSource, $feature, $icon, $studioAvatar, $studioHeader, $websiteStartScreenSource)) {
+foreach ($required in @($landscapeSource, $squareSource, $portraitSource, $storySource, $cleanSource, $feature, $icon, $studioAvatar, $studioHeader, $websiteStartScreenSource, $titleBadgeSource, $titleBadgeEnSource, $titleBadgeRuSource, $productLockupSource, $productLockupEnSource, $productLockupRuSource)) {
   if (-not (Test-Path -LiteralPath $required)) {
     throw "Missing press-kit source: $required"
   }
@@ -36,19 +43,12 @@ foreach ($required in @($landscapeSource, $squareSource, $portraitSource, $story
 
 New-Item -ItemType Directory -Force -Path $keyArt, $logos, $studio, $store, $phone, $tablet, $previews, $downloads | Out-Null
 
-# Preserve the paper title artwork already used by the app and live store graphic.
-$titleBadge = Join-Path $logos 'truth-or-mole_title-badge_1200.png'
-& $magick $feature -crop '430x270+45+15' +repage `
-  '(' -size '430x270' 'xc:black' -fill white -stroke none -draw 'polygon 76,52 96,38 151,33 344,18 375,39 403,46 406,241 374,262 72,267 45,224 45,78' -blur '0x0.6' ')' `
-  -alpha off -compose CopyOpacity -composite -trim +repage -filter Lanczos -resize '1200x' -unsharp '0x0.75+0.75+0.008' $titleBadge
-if ($LASTEXITCODE -ne 0) { throw 'Failed to render the canonical title badge.' }
-
-$productLockup = Join-Path $logos 'truth-or-mole_product-lockup_horizontal_2000x900.png'
-& $magick -size '2000x900' 'xc:none' `
-  '(' $icon -resize '700x700!' ')' -gravity west -geometry '+55+0' -composite `
-  '(' $titleBadge -resize '1120x778' ')' -gravity east -geometry '+55+0' -composite `
-  -depth 8 -define 'png:color-type=6' $productLockup
-if ($LASTEXITCODE -ne 0) { throw 'Failed to render the horizontal product lockup.' }
+Copy-Item -LiteralPath $titleBadgeSource -Destination (Join-Path $logos 'truth-or-mole_title-badge_1200.png') -Force
+Copy-Item -LiteralPath $titleBadgeEnSource -Destination (Join-Path $logos 'truth-or-mole_title-badge_en_1600.png') -Force
+Copy-Item -LiteralPath $titleBadgeRuSource -Destination (Join-Path $logos 'truth-or-mole_title-badge_ru_1600.png') -Force
+Copy-Item -LiteralPath $productLockupSource -Destination (Join-Path $logos 'truth-or-mole_product-lockup_horizontal_2000x900.png') -Force
+Copy-Item -LiteralPath $productLockupEnSource -Destination (Join-Path $logos 'truth-or-mole_product-lockup_horizontal_en_2000x900.png') -Force
+Copy-Item -LiteralPath $productLockupRuSource -Destination (Join-Path $logos 'truth-or-mole_product-lockup_horizontal_ru_2000x900.png') -Force
 
 $landscape = Join-Path $keyArt 'truth-or-mole_key-art_16x9_1920x1080.jpg'
 & $magick $landscapeSource -crop '1536x864+0+80' +repage -filter Lanczos -resize '1920x1080!' -quality 93 $landscape
