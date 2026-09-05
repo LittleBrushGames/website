@@ -276,3 +276,20 @@ html{scrollbar-gutter:stable}
  .casefile-scene:hover .casefile-scene__art{scale:1}
  .casefile-scene:hover .casefile-note{translate:none;rotate:none}
 }
+
+/* Recognizable platform accents, visible before hover and on touch screens. */
+:is(.social-link,.channel-card)[href*="tiktok.com"]{--social:#25f4ee}
+:is(.social-link,.channel-card)[href*="instagram.com"]{--social:#ff8abe}
+:is(.social-link,.channel-card)[href*="youtube.com"]{--social:#ff476a}
+:is(.social-link,.channel-card)[href*="x.com/"]{--social:#ffffff}
+:is(.social-link,.channel-card)[href*="bsky.app"]{--social:#389fff}
+:is(.social-link,.channel-card)[href*="facebook.com"]{--social:#548fff}
+.social-link{border-color:color-mix(in srgb,var(--social) 48%,#27303b);background:color-mix(in srgb,var(--social) 12%,#07111f);box-shadow:inset 0 1px 0 #ffffff0a}
+.social-link img{width:24px;height:24px}
+.social-link--primary b{color:var(--social)}
+.social-link--primary small{color:#c5ceda}
+.social-link:hover,.social-link:focus-visible{border-color:var(--social);background:color-mix(in srgb,var(--social) 22%,#07111f);box-shadow:0 0 18px color-mix(in srgb,var(--social) 20%,transparent)}
+:is(.social-link,.channel-card)[href*="tiktok.com"] img{filter:drop-shadow(1px 1px 0 #fe2c55)}
+.channel-card{border-color:color-mix(in srgb,var(--social) 42%,#27303b);background:linear-gradient(120deg,color-mix(in srgb,var(--social) 9%,#101d2d),#091523)}
+.channel-card>span{color:var(--social)}
+.channel-card:hover,.channel-card:focus-visible{border-color:var(--social);box-shadow:0 8px 28px color-mix(in srgb,var(--social) 14%,transparent)}
