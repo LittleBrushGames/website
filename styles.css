@@ -148,10 +148,9 @@ button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:poin
  .follow-contact{align-items:flex-start;flex-direction:column;gap:16px;margin-top:25px;padding-bottom:20px}
 }
 .topbar{position:relative;z-index:10}
-.hero__art{mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);}
-@media(max-width:700px){.hero__art{mask-image:linear-gradient(180deg,transparent,#000 7%,#000 94%,transparent)}}
-
-@media(min-width:701px){.hero{overflow:hidden}.hero__art{mask-image:radial-gradient(ellipse at 53% 53%,#000 47%,#000c 66%,transparent 85%)}}
+/* Fade to zero at every image edge, independent of its aspect ratio. */
+.hero__art{-webkit-mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent),linear-gradient(180deg,transparent,#000 8%,#000 85%,transparent);mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent),linear-gradient(180deg,transparent,#000 8%,#000 85%,transparent);-webkit-mask-composite:source-in;mask-composite:intersect}
+@media(min-width:701px){.hero{overflow:hidden}}
 
 
 .project-card{display:flex;flex-direction:column}.project-card__media{flex-shrink:0}.project-card__content{display:flex;flex-direction:column;flex:1}.project-link{margin-top:auto}
