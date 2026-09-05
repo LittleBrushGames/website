@@ -7,7 +7,8 @@ const source = readFileSync(join(__dirname, '../analytics.js'), 'utf8');
 function visit(saved, hostname = 'andynata.com', brokenStorage = false) {
   const nodes = [], stored = {}, cookies = [], listeners = {};
   const element = tag => ({ tag, events: {}, append(...children) { nodes.push(...children); },
-    setAttribute() {}, addEventListener(name, fn) { this.events[name] = fn; }, showModal() { this.open = true; } });
+    setAttribute() {}, addEventListener(name, fn) { this.events[name] = fn; }, show() { this.open = true; },
+    showModal() { throw Error('Consent must not make the page inert: cosmetic blockers can hide the dialog.'); } });
   const document = { head: element('head'), body: element('body'), createElement: element, querySelector: () => null };
   Object.defineProperty(document, 'cookie', { get: () => '_ga=abc; _ga_DLNT4X7N46=abc; session=keep', set: value => cookies.push(value) });
   const context = { document, location: { hostname, reload() { context.reloaded = true; } },
@@ -17,11 +18,12 @@ function visit(saved, hostname = 'andynata.com', brokenStorage = false) {
   context.window = context;
   runInNewContext(source, context);
   return { context, nodes, cookies, listeners, stored, scripts: () => nodes.filter(n => n.tag === 'script'),
-    dialog: nodes.find(n => n.tag === 'dialog'), choose(value) { this.dialog.returnValue = value; this.dialog.events.close(); } };
+    dialog: nodes.find(n => n.tag === 'section'), choose(value) { this.dialog.events.submit({preventDefault() {}, submitter: {value}}); } };
 }
 const saved = (value, time = Date.now()) => JSON.stringify({ value, time });
 let page = visit(null);
-assert.equal(page.scripts().length, 0); assert.equal(page.dialog.open, true);
+assert.equal(page.scripts().length, 0); assert.equal(page.dialog.hidden, true);
+assert.equal(page.nodes.some(n => n.tag === 'dialog'), false);
 page.choose('denied'); assert.equal(page.scripts().length, 0);
 page = visit(saved('denied')); assert.equal(page.dialog.open, undefined); assert.equal(page.scripts().length, 0);
 page = visit(null); page.choose('granted'); page.choose('granted');

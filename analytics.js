@@ -32,15 +32,16 @@
 
   const style = document.createElement('link');
   style.rel = 'stylesheet';
-  style.href = '/analytics.css';
+  style.href = '/analytics.css?v=20260905-2';
   document.head.append(style);
-  const dialog = document.createElement('dialog');
+  const dialog = document.createElement('section');
+  dialog.hidden = true;
   dialog.className = 'analytics-consent';
   dialog.setAttribute('aria-labelledby', 'analytics-title');
   dialog.innerHTML = `<h2 id="analytics-title">Help us understand what you enjoy</h2>
     <p>With your permission, we use Google Analytics cookies to measure visits, traffic sources and interactions on this website. Google receives usage and device information. We do not enable advertising personalization.</p>
     <p>You can use the whole site without analytics and change your choice at any time through <strong>Cookie settings</strong>. Your choice and analytics cookies last up to 180 days. <a href="https://legal.littlebrushgames.com/privacy.html">Privacy policy</a> · <a href="https://policies.google.com/technologies/partner-sites">How Google uses website data</a></p>
-    <form method="dialog"><button value="denied" autofocus>Reject analytics</button><button value="granted">Accept analytics</button></form>`;
+    <form><button value="denied">Reject analytics</button><button value="granted">Accept analytics</button></form>`;
   document.body.append(dialog);
   const settingsContainers = [document.querySelector('.footer__meta'), document.querySelector('.page-notes')].filter(Boolean);
   if (!settingsContainers.length) settingsContainers.push(document.querySelector('footer') || document.body);
@@ -50,11 +51,13 @@
     settings.className = 'analytics-settings';
     settings.textContent = 'Cookie settings';
     container.append(settings);
-    settings.addEventListener('click', () => { dialog.returnValue = ''; dialog.showModal(); });
+    settings.addEventListener('click', () => { dialog.hidden = !dialog.hidden; if (!dialog.hidden) dialog.scrollIntoView({ block: 'center' }); });
   }
-  dialog.addEventListener('close', () => {
-    const value = dialog.returnValue;
+  dialog.addEventListener('submit', event => {
+    event.preventDefault();
+    const value = event.submitter?.value;
     if (!['granted', 'denied'].includes(value)) return;
+    dialog.hidden = true;
     choice = value;
     try { localStorage.setItem(key, JSON.stringify({ value, time: Date.now() })); } catch { /* This visit only. */ }
     if (value === 'granted') enable();
@@ -78,5 +81,4 @@
     location.reload();
   });
   if (choice === 'granted') enable();
-  else if (choice !== 'denied') dialog.showModal();
 })();
