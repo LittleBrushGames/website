@@ -293,3 +293,16 @@ html{scrollbar-gutter:stable}
 .channel-card{border-color:color-mix(in srgb,var(--social) 42%,#27303b);background:linear-gradient(120deg,color-mix(in srgb,var(--social) 9%,#101d2d),#091523)}
 .channel-card>span{color:var(--social)}
 .channel-card:hover,.channel-card:focus-visible{border-color:var(--social);box-shadow:0 8px 28px color-mix(in srgb,var(--social) 14%,transparent)}
+
+/* Keep the first project in view on phones without changing desktop composition. */
+@media(max-width:700px){
+ .topbar{height:60px;flex-direction:row;justify-content:space-between;padding:0 16px;gap:12px}
+ .topbar .brand{font-size:clamp(11px,3.3vw,15px)}
+ .topbar .primary-nav{gap:14px}
+ .topbar .primary-nav>a,.topbar .project-menu summary{font-size:12px;min-height:44px}
+ .hero__copy{padding-top:20px}
+ .hero h1{font-size:clamp(25px,7.4vw,40px);line-height:1.06}
+ .hero h1 br:first-of-type{display:none}
+ .hero__rule{margin:12px 0 10px}
+ .hero__intro{font-size:13px;line-height:1.5}
+}
