@@ -26,6 +26,7 @@ page.choose('denied'); assert.equal(page.scripts().length, 0);
 page = visit(saved('denied')); assert.equal(page.dialog.open, undefined); assert.equal(page.scripts().length, 0);
 page = visit(null); page.choose('granted'); page.choose('granted');
 assert.equal(page.scripts().length, 1);
+assert.equal(Object.prototype.toString.call(page.context.dataLayer[0]), '[object Arguments]');
 assert.match(page.scripts()[0].src, /G-DLNT4X7N46$/);
 assert.equal(page.context.dataLayer[0][2].analytics_storage, 'denied');
 assert.equal(page.context.dataLayer.find(row => row[0] === 'config')[2].allow_google_signals, false);

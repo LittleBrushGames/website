@@ -11,7 +11,7 @@
   } catch { /* Unavailable storage leaves analytics off until a choice is made. */ }
 
   window.dataLayer = window.dataLayer || [];
-  const gtag = (...args) => window.dataLayer.push(args);
+  function gtag() { window.dataLayer.push(arguments); }
   gtag('consent', 'default', {
     analytics_storage: 'denied', ad_storage: 'denied',
     ad_user_data: 'denied', ad_personalization: 'denied'
