@@ -1,33 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://littlebrushgames.com/</loc>
-  </url>
-  <url>
-    <loc>https://littlebrushgames.com/de/</loc>
-  </url>
-  <url>
-    <loc>https://littlebrushgames.com/ru/</loc>
-  </url>
-  <url>
-    <loc>https://littlebrushgames.com/truth-or-mole/</loc>
-  </url>
-  <url>
-    <loc>https://littlebrushgames.com/de/truth-or-mole/</loc>
-  </url>
-  <url>
-    <loc>https://littlebrushgames.com/ru/truth-or-mole/</loc>
-  </url>
-  <url>
-    <loc>https://littlebrushgames.com/press-kit.html</loc>
-  </url>
-  <url>
-    <loc>https://littlebrushgames.com/de/press-kit.html</loc>
-  </url>
-  <url>
-    <loc>https://littlebrushgames.com/ru/press-kit.html</loc>
-  </url>
-  <url>
-    <loc>https://littlebrushgames.com/play/</loc>
-  </url>
+<url><loc>https://littlebrushgames.com/</loc></url>
+<url><loc>https://littlebrushgames.com/truth-or-mole/</loc></url>
+<url><loc>https://littlebrushgames.com/dungeon-generator/</loc></url>
+<url><loc>https://littlebrushgames.com/secret-pc-project/</loc></url>
+<url><loc>https://littlebrushgames.com/follow/</loc></url>
+<url><loc>https://littlebrushgames.com/truth-or-mole/press-kit/</loc></url>
+<url><loc>https://littlebrushgames.com/de/</loc></url>
+<url><loc>https://littlebrushgames.com/de/truth-or-mole/</loc></url>
+<url><loc>https://littlebrushgames.com/de/press-kit.html</loc></url>
+<url><loc>https://littlebrushgames.com/ru/</loc></url>
+<url><loc>https://littlebrushgames.com/ru/truth-or-mole/</loc></url>
+<url><loc>https://littlebrushgames.com/ru/press-kit.html</loc></url>
 </urlset>

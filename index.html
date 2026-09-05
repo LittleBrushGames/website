@@ -3,191 +3,64 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Little Brush Games — Playful games. Better together.</title>
-  <meta name="description" content="Little Brush Games creates playful, social-first games. Play Truth or Mole on Android: one topic, different public prompts, one shared phone, 3–16 players.">
-  <link rel="canonical" href="https://littlebrushgames.com/">
-  <link rel="alternate" hreflang="en" href="https://littlebrushgames.com/">
-  <link rel="alternate" hreflang="de" href="https://littlebrushgames.com/de/">
-  <link rel="alternate" hreflang="ru" href="https://littlebrushgames.com/ru/">
-  <link rel="alternate" hreflang="x-default" href="https://littlebrushgames.com/">
-  <meta name="theme-color" content="#070b13">
-  <meta property="og:title" content="Little Brush Games — Playful games. Better together.">
-  <meta property="og:description" content="Little Brush Games creates playful, social-first games. Our first release, Truth or Mole, is out now on Android.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://littlebrushgames.com/">
-  <meta property="og:image" content="https://littlebrushgames.com/assets/og-little-brush-games.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="Little Brush Games">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:locale:alternate" content="de_DE">
-  <meta property="og:locale:alternate" content="ru_RU">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="assets/little-brush-games-logo.png" type="image/png">
-  <script>document.documentElement.classList.add('js');</script>
-  <link rel="stylesheet" href="styles.css?v=20260831-5">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://littlebrushgames.com/#studio",
-        "name": "Little Brush Games",
-        "url": "https://littlebrushgames.com/",
-        "email": "hello@littlebrushgames.com",
-        "sameAs": ["https://www.youtube.com/@LittleBrushGames", "https://www.tiktok.com/@littlebrushgames", "https://x.com/LittleBrushGame", "https://www.instagram.com/littlebrushgames/", "https://bsky.app/profile/littlebrushgames.bsky.social", "https://www.facebook.com/profile.php?id=61593809078184"]
-      },
-      {
-        "@type": "VideoGame",
-        "@id": "https://littlebrushgames.com/truth-or-mole/#game",
-        "name": "Truth or Mole",
-        "description": "A pass-and-play social deduction party game where every player gets a different public prompt from one topic and the Mole must lie convincingly.",
-        "url": "https://littlebrushgames.com/truth-or-mole/",
-        "image": "https://littlebrushgames.com/assets/og-truth-or-mole.jpg",
-        "author": { "@id": "https://littlebrushgames.com/#studio" },
-        "publisher": { "@id": "https://littlebrushgames.com/#studio" },
-        "applicationCategory": "GameApplication",
-        "operatingSystem": "Android",
-        "gamePlatform": "Android",
-        "playMode": "MultiPlayer",
-        "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 16 },
-        "inLanguage": ["en", "de", "ru"],
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "url": "https://play.google.com/store/apps/details?id=com.littlebrushgames.truthormole"
-        }
-      }
-    ]
-  }
-  </script>
+  <meta name="theme-color" content="#030b16">
+  <title>Andy & Nata — We Make Games Together</title>
+  <meta name="description" content="We're Andy & Nata, a developer couple making games and tools together. Explore our games, our Unity tools, and stories from the work in between.">
+  <link rel="icon" href="assets/favicon-128.png">
+  <link rel="preload" href="assets/Unbounded.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/Manrope.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=20260905-release1">
+  <script src="assets/vendor/gsap-3.13.0.min.js" defer></script><script src="script.js?v=20260905-release1" defer></script>
+<link rel="canonical" href="https://littlebrushgames.com/">
+<meta property="og:title" content="Andy & Nata — We Make Games Together"><meta property="og:description" content="We're Andy & Nata, a developer couple making games and tools together. Explore our games, our Unity tools, and stories from the work in between."><meta property="og:type" content="website"><meta property="og:url" content="https://littlebrushgames.com/"><meta property="og:image" content="https://littlebrushgames.com/assets/og/studio.jpg"><meta property="og:image:alt" content="Andy & Nata — We Make Games Together"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Andy & Nata — We Make Games Together"><meta name="twitter:description" content="We're Andy & Nata, a developer couple making games and tools together. Explore our games, our Unity tools, and stories from the work in between."><meta name="twitter:image" content="https://littlebrushgames.com/assets/og/studio.jpg">
+<link rel="alternate" hreflang="de" href="https://littlebrushgames.com/de/"><link rel="alternate" hreflang="ru" href="https://littlebrushgames.com/ru/"><link rel="alternate" hreflang="en" href="https://littlebrushgames.com/"><link rel="alternate" hreflang="x-default" href="https://littlebrushgames.com/">
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="release-strip"><span class="status-dot" aria-hidden="true"></span>Truth or Mole is out now on Android</div>
+<body class="home-page">
+  <a class="skip-link" href="#projects">Skip to the projects</a>
+  <div class="home-frame" id="home">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Andy and Nata, home"><span>ANDY</span><em>&amp;</em><span>NATA</span></a>
+      <nav class="primary-nav" aria-label="Primary navigation"><a href="./" aria-current="page">Home</a><details class="project-menu"><summary>Projects <span aria-hidden="true">⌄</span></summary><div class="project-menu__shade" aria-hidden="true"></div><div class="project-menu__panel"><div class="project-menu__heading"><div><p class="eyebrow">Made by Andy &amp; Nata</p><h2>Find your next adventure<span>.</span></h2></div><button class="menu-close" type="button" aria-label="Close projects" hidden>×</button></div><div class="project-menu__cards"><a href="./secret-pc-project/"><img src="./assets/secret-pc-project-wide-v1.webp" width="64" height="40" alt=""><span><strong>Secret PC Project</strong><small>In development</small></span><b aria-hidden="true">→</b></a><a href="./dungeon-generator/"><img src="./assets/dungeon-generator-wide-v1.webp" width="64" height="40" alt=""><span><strong>Dungeon Generator</strong><small>Tool for Unity · In development</small></span><b aria-hidden="true">→</b></a><a href="./truth-or-mole/"><img src="./assets/truth-or-mole.webp" width="64" height="40" alt=""><span><strong>Truth or Mole</strong><small>Android · Out now</small></span><b aria-hidden="true">→</b></a></div><div class="project-menu__foot"><span>Games for players. Tools for developers.</span><span>Made together.</span></div></div></details><a href="./follow/">Follow</a></nav>
+      <span class="topbar__note"><i></i> Made together.</span>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__copy">
 
-  <header class="site-header">
-    <nav class="nav shell" aria-label="Primary navigation">
-      <a class="brand" href="#top" aria-label="Little Brush Games home"><img class="brand-mark" src="assets/little-brush-games-logo.png" width="38" height="38" alt=""><span>Little Brush Games</span></a>
-      <div class="nav-links">
-        <a href="#game">Our game</a><a href="#how">How it works</a><a href="#screens">Screenshots</a><a href="press-kit.html">Press kit</a>
-      </div>
-      <div class="language-switcher" aria-label="Language"><a href="/" lang="en" hreflang="en" aria-current="page">EN</a><a href="/de/" lang="de" hreflang="de">DE</a><a href="/ru/" lang="ru" hreflang="ru">RU</a></div>
-      <a class="button button-small" href="play/?utm_source=website&amp;utm_medium=header&amp;utm_campaign=truth_or_mole_launch">Play now</a>
+          <h1 id="hero-title">We make<br> games<br> together<span>.</span></h1>
+          <div class="hero__rule" aria-hidden="true"></div>
+          <p class="hero__intro">Games for players. Tools for developers.<br> Stories from the work in between.</p>
+        </div>
+        <img class="hero__art" src="assets/andy-nata-hero-v4-1536.webp" srcset="assets/andy-nata-hero-v4-768.webp 768w, assets/andy-nata-hero-v4-1536.webp 1536w" sizes="(max-width: 700px) 100vw, 58vw" width="1536" height="1024" fetchpriority="high" alt="Andy and Nata, a developer couple, surrounded by programming, game-building, and social-play illustrations.">
+      </section>
+      <section class="projects" id="projects" aria-label="Current projects">
+        <article class="project-card" data-reveal>
+          <div class="project-card__media"><img src="assets/secret-pc-project-wide-v1.webp" width="1792" height="896" alt="A sealed black dossier with a paw-print wax seal."><span class="badge badge--development">In development</span></div>
+          <div class="project-card__content"><p class="project-card__category">PC game</p><h2>Secret PC Project</h2><p class="project-card__description">Something new is in the works.<br> We're keeping this one under wraps.</p><a class="project-link" href="secret-pc-project/" aria-label="View Secret PC Project">View project <span aria-hidden="true">→</span></a></div>
+        </article>
+        <article class="project-card" data-reveal>
+          <div class="project-card__media"><img src="assets/dungeon-generator-wide-v1.webp" width="1792" height="896" alt="A cobalt dungeon blueprint beside a dimensional dungeon illustration."><span class="badge badge--development">In development</span></div>
+          <div class="project-card__content"><p class="project-card__category">Tool for Unity</p><h2>Dungeon Generator</h2><p class="project-card__description">From a layout to a place to explore.<br> A procedural tool we're building.</p><a class="project-link" href="dungeon-generator/" aria-label="View Dungeon Generator">View project <span aria-hidden="true">→</span></a></div>
+        </article>
+        <article class="project-card" data-reveal>
+          <div class="project-card__media"><img src="assets/truth-or-mole.webp" width="1024" height="500" alt="Truth or Mole game artwork with hidden-role and voting screens."></div>
+          <div class="project-card__content"><div class="project-card__availability"><span class="badge badge--live">Android · Out now</span><span class="badge badge--ios">iOS · In development</span></div><h2>Truth or Mole</h2><p class="project-card__description">Spot the liar. Catch the mole.<br> 3–16 players. One shared device.</p><a class="project-link" href="truth-or-mole/" aria-label="View Truth or Mole">View project <span aria-hidden="true">→</span></a></div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <div class="page-notes"><span>Made by Andy &amp; Nata.</span><a href="mailto:hello@littlebrushgames.com">Contact</a><a href="https://legal.littlebrushgames.com/privacy.html">Privacy</a><a href="https://legal.littlebrushgames.com/terms.html">Terms</a></div>
+  <footer class="footer" id="follow" tabindex="-1">
+    <div class="footer__identity"><strong>ANDY &amp; NATA</strong><span>Follow the build</span></div>
+    <nav class="footer__socials" aria-label="Social media">
+      <a class="social-link social-link--primary" href="https://www.tiktok.com/@andynatagames" target="_blank" rel="noopener" aria-label="Andy and Nata on TikTok"><img src="assets/social/tiktok.svg" width="22" height="22" alt=""><span><b>TikTok</b><small>@andynatagames</small></span></a>
+      <a class="social-link social-link--primary social-link--instagram" href="https://www.instagram.com/andynatagames/" target="_blank" rel="noopener" aria-label="Andy and Nata on Instagram"><img src="assets/social/instagram.svg" width="22" height="22" alt=""><span><b>Instagram</b><small>@andynatagames</small></span></a>
+      <a class="social-link" href="https://www.youtube.com/@AndyNataGames" target="_blank" rel="noopener" aria-label="Andy and Nata on YouTube"><img src="assets/social/youtube.svg" width="22" height="22" alt=""></a>
+      <a class="social-link" href="https://x.com/andynatagames" target="_blank" rel="noopener" aria-label="Andy and Nata on X"><img src="assets/social/x.svg" width="22" height="22" alt=""></a>
+      <a class="social-link" href="https://bsky.app/profile/andynata.bsky.social" target="_blank" rel="noopener" aria-label="Andy and Nata on Bluesky"><img src="assets/social/bluesky.svg" width="22" height="22" alt=""></a>
+      <a class="social-link" href="https://www.facebook.com/andynatagames" target="_blank" rel="noopener" aria-label="Andy and Nata on Facebook"><img src="assets/social/facebook.svg" width="22" height="22" alt=""></a>
     </nav>
-  </header>
-
-  <main id="main">
-    <section class="studio-hero" id="top" aria-labelledby="studio-hero-title">
-      <h1 class="sr-only" id="studio-hero-title">Little Brush Games — Playful games. Better together.</h1>
-      <picture>
-        <source media="(max-width: 680px)" srcset="assets/little-brush-games-studio-hero-mobile.webp">
-        <img class="studio-hero-art" src="assets/little-brush-games-studio-hero.webp" width="2560" height="1440" alt="Five friends laughing around one glowing phone in a warm game-night room beside the colorful Little Brush Games paintbrush identity" fetchpriority="high">
-      </picture>
-      <div class="studio-hero-dock shell">
-        <div>
-          <p class="eyebrow">Independent game studio · Hamburg</p>
-          <p class="studio-hero-summary">Games that turn screens into reasons to look at each other.</p>
-        </div>
-        <div class="studio-hero-actions">
-          <a class="button" href="#game">Meet Truth or Mole <span aria-hidden="true">↓</span></a>
-          <a class="text-link" href="press-kit.html">Studio &amp; press kit →</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="game-spotlight" id="game" aria-labelledby="game-title">
-      <div class="game-spotlight-inner shell">
-        <div class="game-spotlight-copy" data-reveal>
-          <div class="product-label"><img src="assets/truth-or-mole-icon.webp" width="512" height="512" alt=""><p class="eyebrow">Truth or Mole · Out now on Android</p></div>
-          <h2 class="game-hook" id="game-title">One topic.<br>Different questions.<br><span>One liar.</span></h2>
-          <p class="hero-lede">Pass one phone around the table. Each round picks one topic, then every player gets a different public prompt. Honest players answer truthfully; the Mole must sell a believable lie — then survive the vote.</p>
-          <div class="hero-actions">
-            <a class="button" href="play/?utm_source=website&amp;utm_medium=hero&amp;utm_campaign=truth_or_mole_launch"><span aria-hidden="true">▶</span> Get it on Google Play</a>
-            <a class="text-link" href="truth-or-mole/">Explore the full game <span aria-hidden="true">→</span></a>
-          </div>
-          <ul class="fact-list" aria-label="Game facts">
-            <li><strong>3–16</strong><span>players</span></li><li><strong>1</strong><span>phone</span></li><li><strong>EN · DE · RU</strong><span>languages</span></li><li><strong>1,839</strong><span>questions</span></li>
-          </ul>
-        </div>
-        <figure class="game-device" data-reveal>
-          <div class="game-device-frame"><img src="assets/truth-or-mole-start-screen.webp" width="810" height="1800" alt="Truth or Mole start screen showing the detective case board, Start Game button, How to play button, and support for 3–16 players" loading="lazy"></div>
-          <figcaption><span class="status-dot" aria-hidden="true"></span>Actual start screen · Current Android build</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="proof-bar" aria-label="Product qualities"><div class="shell proof-grid"><span>✓ No accounts</span><span>✓ No room code</span><span>✓ Pass-and-play</span><span>✓ Start in minutes</span></div></section>
-
-    <section class="section shell" id="how">
-      <div class="section-heading" data-reveal><p class="eyebrow">The case in three steps</p><h2>Easy to start. Hard to bluff.</h2><p>No rulebook speech and no second screen. The phone tells each player exactly what to do.</p></div>
-      <div class="steps">
-        <article class="case-card" data-reveal><span class="case-number">01</span><div class="case-icon" aria-hidden="true">?</div><h3>Answer the prompt</h3><p>Every player gets a public question or task on their turn.</p></article>
-        <article class="case-card case-card-red" data-reveal><span class="case-number">02</span><div class="case-icon" aria-hidden="true">🐀</div><h3>Tell truth — or bluff</h3><p>Honest players tell the truth. The hidden mole answers with a plausible lie.</p></article>
-        <article class="case-card" data-reveal><span class="case-number">03</span><div class="case-icon" aria-hidden="true">☝</div><h3>Discuss and vote</h3><p>Read the room, accuse a suspect, and find out whether the group caught the mole.</p></article>
-      </div>
-    </section>
-
-    <section class="section section-wide" id="screens">
-      <div class="shell"><div class="section-heading section-heading-row" data-reveal><div><p class="eyebrow">Real game screens</p><h2>The evidence speaks for itself.</h2></div><p>Every screen below comes from the current Android build — no concept UI and no fake gameplay.</p></div></div>
-      <div class="screenshot-track" aria-label="Gameplay screenshots">
-        <figure><img src="assets/screenshots/current/01-round-question.webp" width="1080" height="1920" alt="A player answers a public question" loading="lazy"><figcaption>Answer or bluff</figcaption></figure>
-        <figure><img src="assets/screenshots/current/02-mole-role.webp" width="1080" height="1920" alt="The secret mole role is revealed" loading="lazy"><figcaption>Hide your role</figcaption></figure>
-        <figure><img src="assets/screenshots/current/03-voting.webp" width="1080" height="1920" alt="Players vote for the suspected mole" loading="lazy"><figcaption>Name a suspect</figcaption></figure>
-        <figure><img src="assets/screenshots/current/04-mole-exposed.webp" width="1080" height="1920" alt="The mole is exposed after the vote" loading="lazy"><figcaption>Catch the mole</figcaption></figure>
-        <figure><img src="assets/screenshots/current/05-game-setup.webp" width="1080" height="1920" alt="Game setup with players and modes" loading="lazy"><figcaption>Set up the group</figcaption></figure>
-        <figure><img src="assets/screenshots/current/06-pack-selection.webp" width="1080" height="1920" alt="Question pack selection" loading="lazy"><figcaption>Pick the mood</figcaption></figure>
-      </div>
-    </section>
-
-    <section class="section shell" id="content">
-      <div class="section-heading" data-reveal><p class="eyebrow">A different case every night</p><h2>16 packs. 1,839 reasons to overshare.</h2><p>Mix packs for the group you actually have: friends, family, couples, colleagues, kids, or the people who always pick the chaotic option.</p></div>
-      <div class="pack-grid" aria-label="Example question packs"><span>Party</span><span>Family &amp; friends</span><span>Couples</span><span>Memories</span><span>Corporate</span><span>Hardcore</span><span>Kids</span><span>After dark</span></div>
-      <div class="mode-grid">
-        <article><strong>⚡ Blitz rounds</strong><p>Fast answers. Less time to manufacture the perfect story.</p></article>
-        <article><strong>🎭 Hidden tasks</strong><p>Extra secret objectives create better tells and louder accusations.</p></article>
-        <article><strong>🐀 Two moles</strong><p>For larger groups that want the case to get significantly messier.</p></article>
-      </div>
-    </section>
-
-    <section class="section studio-section" id="studio"><div class="shell studio-grid" data-reveal><div><p class="eyebrow">Built by Little Brush Games</p><h2>Small studio.<br>Big table energy.</h2></div><div class="studio-copy"><p>We create playful games that bring people together, with a particular love for social and party experiences. Truth or Mole is our first released game — not a limit on what comes next.</p><div class="studio-links"><a class="text-link" href="press-kit.html">Open the press kit →</a><a class="text-link" href="mailto:hello@littlebrushgames.com?subject=Little%20Brush%20Games">hello@littlebrushgames.com →</a></div></div></div></section>
-
-    <section class="section shell faq-section" id="faq">
-      <div class="section-heading" data-reveal><p class="eyebrow">Before the first accusation</p><h2>Good to know.</h2></div>
-      <div class="faq-grid">
-        <details open><summary>Is Truth or Mole available now?</summary><p>Yes. The Android version is live on Google Play. An iOS version is not currently available.</p></details>
-        <details><summary>Does everyone need the app?</summary><p>No. The whole group shares one phone and passes it from player to player.</p></details>
-        <details><summary>How many people can play?</summary><p>Truth or Mole supports 3–16 players on one device.</p></details>
-        <details><summary>Do I need an account or internet connection?</summary><p>No Little Brush Games account is required. Google Play may require a connection for installation, purchases, and some platform services.</p></details>
-        <details><summary>Which languages are included?</summary><p>English, German, and Russian are available in the current game.</p></details>
-        <details><summary>Where can I request support?</summary><p>Email <a href="mailto:support@littlebrushgames.com">support@littlebrushgames.com</a>.</p></details>
-      </div>
-    </section>
-
-    <section class="final-cta"><div class="shell final-cta-inner"><img src="assets/truth-or-mole-icon.webp" width="512" height="512" alt="Truth or Mole app icon" loading="lazy"><div><p class="eyebrow">The table is ready</p><h2>Who in your group can lie with a straight face?</h2><p>Download Truth or Mole for Android and open the first case tonight.</p></div><a class="button" href="play/?utm_source=website&amp;utm_medium=footer&amp;utm_campaign=truth_or_mole_launch">Play on Google Play</a></div></section>
-  </main>
-
-  <footer class="footer"><div class="shell footer-grid"><div class="brand"><img class="brand-mark" src="assets/little-brush-games-logo.png" width="38" height="38" alt=""><span>Little Brush Games</span></div><p>Playful games. Better together.</p><nav aria-label="Footer navigation"><a href="press-kit.html">Press kit</a><a href="https://legal.littlebrushgames.com/privacy.html">Privacy</a><a href="https://legal.littlebrushgames.com/terms.html">Terms</a><a href="mailto:support@littlebrushgames.com">Support</a></nav><p class="copyright">© 2026 Little Brush Games</p><nav class="social-links" aria-label="Little Brush Games social media"><a href="https://www.youtube.com/@LittleBrushGames" rel="me noopener" target="_blank">YouTube</a><a href="https://www.tiktok.com/@littlebrushgames" rel="me noopener" target="_blank">TikTok</a><a href="https://x.com/LittleBrushGame" rel="me noopener" target="_blank">X</a><a href="https://www.instagram.com/littlebrushgames/" rel="me noopener" target="_blank">Instagram</a><a href="https://bsky.app/profile/littlebrushgames.bsky.social" rel="me noopener" target="_blank">Bluesky</a><a href="https://www.facebook.com/profile.php?id=61593809078184" rel="me noopener" target="_blank">Facebook</a></nav></div></footer>
-  <script>
-    (() => {
-      const items = [...document.querySelectorAll('[data-reveal]')];
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduceMotion || !('IntersectionObserver' in window)) {
-        items.forEach((item) => item.classList.add('is-visible'));
-        return;
-      }
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        });
-      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
-      items.forEach((item) => observer.observe(item));
-    })();
-  </script>
+    <div class="footer__meta"><a href="mailto:hello@littlebrushgames.com">Contact</a><a href="https://legal.littlebrushgames.com/privacy.html">Privacy</a><a href="https://legal.littlebrushgames.com/terms.html">Terms</a></div>
+  </footer>
 </body>
 </html>

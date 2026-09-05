@@ -1,29 +1,23 @@
-# Little Brush Games website
+# Andy & Nata website
 
-Static product and studio website for **Little Brush Games** and **Truth or Mole**. Built as plain HTML/CSS for GitHub Pages. The visual system mirrors the current detective/case-board game UI and uses current Google Play artwork rather than reconstructed interface mockups.
+Public Andy & Nata creator website, published by Little Brush Games at https://littlebrushgames.com/ through GitHub Pages (`main`, repository root). The approved replacement comes from `../andynata-site`.
 
-Key routes:
+## Current routes
 
-- `/`, `/de/`, `/ru/` — localized studio-first homepages with Truth or Mole as the first released game.
-- `/truth-or-mole/`, `/de/truth-or-mole/`, `/ru/truth-or-mole/` — localized player-facing product pages for Truth or Mole.
-- `/play/` — stable campaign link that preserves UTM values in the Google Play Install Referrer. Use `?lang=en`, `?lang=de`, or `?lang=ru` to set its interface language explicitly.
-- `/press-kit.html`, `/de/press-kit.html`, `/ru/press-kit.html` — localized verified facts, approved copy, and downloadable media assets.
+- `/`: creator homepage and project cards.
+- `/truth-or-mole/`, `/dungeon-generator/`, `/secret-pc-project/`: project pages.
+- `/follow/`: official creator channels.
+- `/truth-or-mole/press-kit/`: press resources; `/press-kit.html` redirects here.
+- `/play/`: existing localized campaign redirect, with UTM/referrer handling preserved.
+- `/de/` and `/ru/`: existing localized pages retained with `legacy-styles.css` and current creator social links.
 
-## Local preview
+The new pages use shared CSS, locally vendored GSAP 3.13.0, WOFF2 fonts, and native navigation fallbacks. Reduced motion uses opacity fades without spatial movement. Press downloads retain their stable URLs. Source images, prompt files, and prototype test artifacts are not copied into this release.
 
-```bash
-python3 -m http.server 8765
-```
+## Validation and maintenance
 
-Then open <http://127.0.0.1:8765>.
+Run `python ../andynata-site/tools/check_release.py .` from this directory and `node --check script.js`. Use the prototype's `tools/menu-smoke.html` for repeatable animation tests. Git history preserves the previous release.
 
-Append `?no_redirect=1` to `/play/` when testing the route on Android without leaving the local page.
-
-## Localization
-
-English is the source copy. Keep the homepage and press-kit structure synchronized across `en`, `de`, and `ru`, including reciprocal `hreflang` links and sitemap entries. Studio and product names, plus the canonical slogan `Playful games. Better together.`, remain untranslated.
-
-The `/play/` route uses an explicit `lang` query first, then the browser language, with English as the fallback. Legal pages are maintained separately in the `LittleBrushGames/legal` repository and should not be translated as ordinary marketing copy.
+Brand positioning is Andy & Nata as the developer couple; Little Brush Games is the publisher/legal company. The older product-repository brand contract and archived guidance below predate this approved public-brand transition and must be reconciled at their source before using them for future studio branding decisions.
 
 ## Asset source of truth
 

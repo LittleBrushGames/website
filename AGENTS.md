@@ -1,5 +1,11 @@
 # AGENTS.md
 
+## Current website direction
+
+The user approved replacing the public website with the Andy & Nata prototype on 2026-09-05. Andy & Nata is the public creator brand; Little Brush Games remains the publisher and legal company. The project-level `../AGENTS.md` owns current positioning. The older contract below predates that strategy; do not restore its solo-founder positioning or legacy social handles.
+
+Keep the existing localized pages, campaign redirect, and download URLs working. Localized pages currently use `legacy-styles.css`; the English replacement uses `styles.css` and `script.js`.
+
 ## Brand Governance
 
 - The canonical Little Brush Games brand contract lives at `../TruthOrMole_Flutter/docs/marketing/brand/little-brush-games-brand-contract.md`.
