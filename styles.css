@@ -365,3 +365,11 @@ body:has(.footer-community){--footer:190px}
 .footer--compact .footer-community{height:0}
 @media(max-width:900px){body:has(.footer-community){--footer:170px}.footer-community{width:min(100%,340px);height:76px}.footer-community__copy{padding:12px 0 0 20px}.footer--compact .footer-community{height:0}}
 @media(min-width:901px){.footer-community{width:340px;height:72px}.footer-community>img{width:72px;height:72px}.footer-community__copy{padding-top:8px}.footer--compact .footer-community{display:none}}
+/* Floating glass invitation sits outside the single-row social panel. */
+body:has(.footer-community){--footer:72px}
+.footer:has(.footer-community){height:calc(72px + env(safe-area-inset-bottom));min-height:0;flex-direction:row;justify-content:center;gap:0;padding:12px 20px calc(12px + env(safe-area-inset-bottom))}
+.footer:has(.footer-community) .footer-community{position:absolute;display:block;left:50%;bottom:calc(100% + 10px);width:min(340px,calc(100vw - 40px));height:76px;margin:0;overflow:visible;transform:translateX(-50%);opacity:1;visibility:visible;pointer-events:none;transition:opacity .3s ease,transform .4s cubic-bezier(.22,1,.36,1),visibility 0s}
+.footer-community a{pointer-events:auto;background:linear-gradient(135deg,rgba(113,87,206,.42),rgba(47,34,96,.58));border-color:rgba(190,173,255,.6);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:inset 0 1px 0 #ffffff30,0 6px 22px #0003;text-shadow:0 1px 3px #0007}
+.footer-community a:hover{background:linear-gradient(135deg,rgba(128,100,228,.6),rgba(64,46,120,.7))}
+.footer.footer--compact .footer-community{height:76px;opacity:0;visibility:hidden;transform:translate(-50%,14px);transition:opacity .3s ease,transform .4s cubic-bezier(.22,1,.36,1),visibility 0s .4s}
+@media(prefers-reduced-motion:reduce){.footer:has(.footer-community) .footer-community{transition:none}}
