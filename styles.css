@@ -447,3 +447,5 @@ body:has(.footer-community){--footer:72px}
  .discord-social-label b{font-size:12px;line-height:1.5;color:#171009}
  .discord-social-label small{font-size:10px;line-height:1.5;color:#47300d}
 }
+
+@media(max-width:700px){.home-page .hero__copy{padding-top:14px}.home-page .hero__intro{font-size:14px;line-height:1.45}.home-page .hero__rule{margin-block:10px}.home-page .hero__art{width:calc(85% + 34px);align-self:center;margin:-5px 0 -12px}}
