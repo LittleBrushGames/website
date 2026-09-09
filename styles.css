@@ -1,3 +1,11 @@
+.discord-invite{display:flex;align-items:center;gap:20px;width:min(1440px,calc(100% - 112px));margin:16px auto 0;padding:12px 18px;border:1px solid #8170db;border-radius:12px;background:linear-gradient(110deg,#101b35,#251237);color:#f7e3c4}
+.discord-invite>img{flex:none;filter:brightness(0) invert(1)}
+.discord-invite p{margin:0;flex:1;font-weight:700}
+.discord-invite a{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:44px;padding:10px 20px;border-radius:8px;background:linear-gradient(#ffc65a,#ffad26);color:#171009;font-weight:800;white-space:nowrap}
+.discord-invite a:hover{background:#ffd078}
+@media(max-width:1200px){.discord-invite{width:calc(100% - 64px)}}
+@media(max-width:700px){.discord-invite{width:calc(100% - 40px);gap:10px;padding:12px;margin-top:14px}.discord-invite>img{width:24px;height:24px}.discord-invite p{font-size:13px;line-height:1.4}.discord-invite a{padding:10px 12px;font-size:13px;gap:6px}}
+@media(max-width:360px){.discord-invite{gap:8px}.discord-invite>img{width:20px;height:20px}.discord-invite a{padding-inline:9px}}
 @font-face{font-family:Manrope;font-weight:200 800;src:url("assets/Manrope.woff2") format("woff2");font-display:swap}
 @font-face{font-family:Unbounded;font-weight:200 900;src:url("assets/Unbounded.woff2") format("woff2");font-display:swap}
 :root{color-scheme:dark;--black:#030b16;--navy:#071626;--cream:#f7e3c4;--muted:#b5b3b5;--orange:#ffad46;--violet:#d98dbd;--teal:#7cd7cf;--line:#584737;--soft-line:#27303b;--footer:80px;--shell:1440px}
@@ -306,3 +314,5 @@ html{scrollbar-gutter:stable}
  .hero__rule{margin:12px 0 10px}
  .hero__intro{font-size:13px;line-height:1.5}
 }:is(.social-link,.channel-card)[href*="discord.gg/"]{--social:#8b91ff}
+
+@media(min-width:701px) and (max-height:950px){.discord-invite+main .hero{min-height:280px}}
