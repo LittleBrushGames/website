@@ -431,3 +431,19 @@ body:has(.footer-community){--footer:72px}
  .footer-community a{height:48px;min-height:48px;padding:8px 16px;border-radius:12px}
  .footer.footer--compact .footer-community{display:none}
 }
+/* Mobile glass CTA and centered desktop social links. */
+@media(max-width:1099px){
+ .footer-community a{color:#100b04;gap:9px;background:linear-gradient(180deg,#fff3b833,transparent 55%),linear-gradient(135deg,#ffcb5be8,#ffad28e8);border-color:#ffe6a8cc;backdrop-filter:blur(18px) saturate(120%);-webkit-backdrop-filter:blur(18px) saturate(120%);box-shadow:inset 0 1px #ffffff80,inset 0 -1px #d7872866,0 4px 16px #0003}
+ .footer-community a::before{content:"";width:22px;height:22px;flex:none;background:#100b04;mask:url('assets/social/color/discord.svg') center/contain no-repeat;-webkit-mask:url('assets/social/color/discord.svg') center/contain no-repeat}
+ .footer-community a:hover{background:linear-gradient(135deg,#ffd674f2,#ffb638f2)}
+}
+.discord-social-label{display:none}
+@media(min-width:1100px){
+ .footer:has(.footer-community),.footer.footer--compact{justify-content:center}
+ .footer:has(.footer-community) .footer-community{display:none}
+ .footer:has(.footer-community) .social-link[href*="discord.gg"]{width:auto;min-width:150px;padding-inline:12px;gap:10px;background:linear-gradient(#ffd06a,#ffaf2c);border-color:#ffe09c;color:#171009}
+ .footer:has(.footer-community) .social-link[href*="discord.gg"] img{filter:brightness(0)}
+ .footer:has(.footer-community) .social-link .discord-social-label{display:flex;flex-direction:column}
+ .discord-social-label b{font-size:12px;line-height:1.5;color:#171009}
+ .discord-social-label small{font-size:10px;line-height:1.5;color:#47300d}
+}
