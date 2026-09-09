@@ -1,0 +1,49 @@
+/* Sketch & Build: panoramic concept art and native Instagram embeds. */
+.sketch-hero{position:relative;isolation:isolate;min-height:420px;display:flex;align-items:center}
+.sketch-hero__art{position:absolute;z-index:-1;inset:0;margin:0}
+.sketch-hero__art img{width:100%;height:100%;object-fit:cover;object-position:center}
+.sketch-hero__art::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#030b1680,transparent 65%),linear-gradient(0deg,#030b16,transparent 25%)}
+.sketch-hero__art figcaption{position:absolute;z-index:1;right:max(56px,calc((100% - var(--shell))/2));bottom:30px;color:#d5d4d5;font-size:11px;text-shadow:0 1px 4px #000}
+.sketch-hero__copy{padding:22px 0 66px}
+.sketch-hero .breadcrumb{display:inline-flex;margin:0 0 26px}
+.sketch-hero h1{margin:0;font:800 clamp(48px,6vw,88px)/1.08 Unbounded,Arial,sans-serif;letter-spacing:-.065em;color:var(--cream)}
+.sketch-hero h1 span{color:var(--orange)}
+.sketch-hero__copy>p{max-width:470px;margin:20px 0 0;color:var(--orange);font-size:19px;font-weight:700;text-wrap:balance}
+.sketch-content{position:relative;margin-top:-20px}
+.engine-status{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0;padding:23px 12px;border:1px solid #806044;border-radius:12px;background:#05111ef5}
+.engine-status>div{display:grid;grid-template-columns:44px 1fr;column-gap:22px;row-gap:4px;align-items:center;padding:0 24px}
+.engine-status>div+div{border-left:1px solid var(--line)}
+.engine-status img{grid-row:span 2;filter:grayscale(1) brightness(0) invert(.9)}
+.engine-status dt{font-size:14px;font-weight:800}
+.engine-status dd{margin:0;font-size:12px;color:#b9bdc7}
+.engine-status .engine-status__active{color:var(--orange);font-weight:800;font-size:15px}
+.engine-status__active::before{content:"";display:inline-block;width:7px;height:7px;margin-right:8px;border-radius:50%;background:currentColor}
+.sketch-page #videos{padding:28px 0 0;border:0}
+.sketch-page .section-heading{margin-bottom:20px}
+.sketch-page .section-heading h2{font-size:20px}
+.sketch-page .section-heading .eyebrow{display:none}
+.sketch-page .development-videos{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.sketch-content>.credit{margin:25px 0 32px}
+@media(max-width:1100px){
+ .engine-status>div{padding:0 15px;column-gap:12px;grid-template-columns:32px 1fr}
+ .engine-status img{width:32px;height:32px}
+ .sketch-page .development-videos{grid-template-columns:repeat(auto-fit,minmax(min(100%,326px),1fr))}
+}
+@media(max-width:700px){
+ .sketch-hero{min-height:470px;align-items:start}
+ .sketch-hero__art img{object-position:70% bottom}
+ .sketch-hero__art::after{background:linear-gradient(180deg,#030b16ec,transparent 70%),linear-gradient(0deg,#030b16,transparent 22%)}
+ .sketch-hero__copy{padding:18px 0 160px}
+ .sketch-hero .breadcrumb{margin-bottom:22px}
+ .sketch-hero h1{font-size:46px}
+ .sketch-hero__copy>p{font-size:16px;max-width:290px;margin-top:14px}
+ .sketch-hero__art figcaption{right:20px;bottom:25px;font-size:9px}
+ .sketch-content{margin-top:-10px}
+ .engine-status{grid-template-columns:1fr;padding:6px 18px}
+ .engine-status>div{padding:15px 0;column-gap:18px;grid-template-columns:34px 1fr}
+ .engine-status>div+div{border-left:0;border-top:1px solid var(--soft-line)}
+ .engine-status dd{font-size:11px}
+ .sketch-page .section-heading h2{font-size:18px}
+}
+
+.engine-status img[src*=godot]{filter:grayscale(1)}
