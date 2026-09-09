@@ -316,3 +316,4 @@ html{scrollbar-gutter:stable}
 }:is(.social-link,.channel-card)[href*="discord.gg/"]{--social:#8b91ff}
 
 @media(min-width:701px) and (max-height:950px){.discord-invite+main .hero{min-height:280px}}
+@media(min-width:901px) and (max-height:950px){.discord-invite+main .hero h1{font-size:clamp(3rem,4vw,3.8rem)}.discord-invite+main .hero__rule{margin-block:16px 12px}}
