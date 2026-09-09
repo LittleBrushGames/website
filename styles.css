@@ -305,4 +305,4 @@ html{scrollbar-gutter:stable}
  .hero h1 br:first-of-type{display:none}
  .hero__rule{margin:12px 0 10px}
  .hero__intro{font-size:13px;line-height:1.5}
-}
+}:is(.social-link,.channel-card)[href*="discord.gg/"]{--social:#8b91ff}
