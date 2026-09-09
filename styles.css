@@ -1,11 +1,3 @@
-.discord-invite{display:flex;align-items:center;gap:20px;width:min(1440px,calc(100% - 112px));margin:16px auto 0;padding:12px 18px;border:1px solid #8170db;border-radius:12px;background:linear-gradient(110deg,#101b35,#251237);color:#f7e3c4}
-.discord-invite>img{flex:none;filter:brightness(0) invert(1)}
-.discord-invite p{margin:0;flex:1;font-weight:700}
-.discord-invite a{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:44px;padding:10px 20px;border-radius:8px;background:linear-gradient(#ffc65a,#ffad26);color:#171009;font-weight:800;white-space:nowrap}
-.discord-invite a:hover{background:#ffd078}
-@media(max-width:1200px){.discord-invite{width:calc(100% - 64px)}}
-@media(max-width:700px){.discord-invite{width:calc(100% - 40px);gap:10px;padding:12px;margin-top:14px}.discord-invite>img{width:24px;height:24px}.discord-invite p{font-size:13px;line-height:1.4}.discord-invite a{padding:10px 12px;font-size:13px;gap:6px}}
-@media(max-width:360px){.discord-invite{gap:8px}.discord-invite>img{width:20px;height:20px}.discord-invite a{padding-inline:9px}}
 @font-face{font-family:Manrope;font-weight:200 800;src:url("assets/Manrope.woff2") format("woff2");font-display:swap}
 @font-face{font-family:Unbounded;font-weight:200 900;src:url("assets/Unbounded.woff2") format("woff2");font-display:swap}
 :root{color-scheme:dark;--black:#030b16;--navy:#071626;--cream:#f7e3c4;--muted:#b5b3b5;--orange:#ffad46;--violet:#d98dbd;--teal:#7cd7cf;--line:#584737;--soft-line:#27303b;--footer:80px;--shell:1440px}
@@ -291,7 +283,6 @@ html{scrollbar-gutter:stable}
 :is(.social-link,.channel-card)[href*="youtube.com"]{--social:#ff476a}
 :is(.social-link,.channel-card)[href*="x.com/"]{--social:#ffffff}
 :is(.social-link,.channel-card)[href*="bsky.app"]{--social:#389fff}
-:is(.social-link,.channel-card)[href*="facebook.com"]{--social:#548fff}
 .social-link{border-color:color-mix(in srgb,var(--social) 48%,#27303b);background:color-mix(in srgb,var(--social) 12%,#07111f);box-shadow:inset 0 1px 0 #ffffff0a}
 .social-link img{width:24px;height:24px}
 .social-link--primary b{color:var(--social)}
@@ -315,5 +306,26 @@ html{scrollbar-gutter:stable}
  .hero__intro{font-size:13px;line-height:1.5}
 }:is(.social-link,.channel-card)[href*="discord.gg/"]{--social:#8b91ff}
 
-@media(min-width:701px) and (max-height:950px){.discord-invite+main .hero{min-height:280px}}
-@media(min-width:901px) and (max-height:950px){.discord-invite+main .hero h1{font-size:clamp(3rem,4vw,3.8rem)}.discord-invite+main .hero__rule{margin-block:16px 12px}}
+
+/* Community footer: expanded near the top, compact after scrolling. */
+body:has(.footer-community){--footer:214px}
+.footer:has(.footer-community){height:auto;display:flex;flex-direction:column;gap:10px;padding:12px 20px calc(12px + env(safe-area-inset-bottom))}
+.footer:has(.footer-community) .footer__identity,.footer:has(.footer-community) .footer__meta{display:none}
+.footer-community{display:grid;grid-template-columns:100px 1fr;align-items:center;width:min(100%,540px);height:120px;flex:none;overflow:hidden;border:1px solid #806044;border-radius:12px;background:#050e1a;transition:height .22s,opacity .22s}
+.footer-community>img{width:110px;height:120px;object-fit:cover;object-position:50% 30%;mask-image:linear-gradient(90deg,#000 75%,transparent)}
+.footer-community__copy{padding:8px 12px 8px 4px}
+.footer-community strong{font-size:20px;line-height:1.2}
+.footer-community p{font-size:12px;line-height:1.4;margin:4px 0 8px;color:var(--muted)}
+.footer-community a{display:inline-flex;align-items:center;gap:18px;min-height:44px;padding:8px 22px;background:linear-gradient(#ffc65a,#ffa51b);border-radius:24px;color:#171009;font-size:14px;font-weight:800}
+.footer-community a:hover{background:#ffd078}
+.footer:has(.footer-community) .footer__socials{width:min(100%,540px);justify-content:space-between}
+.footer:has(.footer-community) .social-link{width:48px;height:48px;min-width:0;padding:0}
+.footer:has(.footer-community) .social-link span{display:none}
+.footer:not(.footer--compact):has(.footer-community) .social-link[href*="discord.gg"]{display:none}
+.footer--compact .footer-community{height:0;opacity:0;border:0;visibility:hidden}
+.footer.footer--compact{gap:0}
+@media(max-width:360px){.footer:has(.footer-community){padding-inline:12px}.footer-community{grid-template-columns:80px 1fr}.footer-community>img{width:85px}.footer-community strong{font-size:17px}.footer:has(.footer-community) .social-link{width:42px;height:44px}}
+@media(prefers-reduced-motion:reduce){.footer-community{transition:none}}
+@media(min-width:901px){body:has(.footer-community){--footer:144px}.footer:has(.footer-community){flex-direction:row;justify-content:center;gap:36px}.footer-community{width:460px;height:120px;grid-template-columns:90px 1fr}.footer-community>img{width:95px;height:120px}.footer:has(.footer-community) .footer__socials{width:320px}.footer--compact .footer-community{display:none}.footer.footer--compact{gap:0}}
+@media(min-width:901px) and (max-height:950px){.home-page:has(.footer-community) .hero{min-height:280px}.home-page:has(.footer-community) .hero h1{font-size:clamp(3rem,4vw,3.8rem)}.home-page:has(.footer-community) .hero__rule{margin-block:16px 12px}}
+@media(max-width:360px){body:has(.footer-community){--footer:234px}.footer-community{height:140px}.footer--compact .footer-community{height:0}}

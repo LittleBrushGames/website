@@ -146,3 +146,18 @@ if (gallery) {
     });
   }
 }
+
+// Reserve expanded footer space so collapsing cannot move the page underneath the reader.
+const communityFooter = document.querySelector('.footer-community');
+if (communityFooter) {
+  const footer = communityFooter.closest('.footer');
+  const syncCommunityFooter = () => {
+    const compact = scrollY > 100 && !communityFooter.contains(document.activeElement);
+    footer.classList.toggle('footer--compact', compact);
+    communityFooter.inert = compact;
+  };
+  addEventListener('scroll', syncCommunityFooter, { passive: true });
+  communityFooter.addEventListener('focusout', () => requestAnimationFrame(syncCommunityFooter));
+  addEventListener('pageshow', syncCommunityFooter);
+  syncCommunityFooter();
+}
