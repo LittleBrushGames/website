@@ -343,3 +343,16 @@ body:has(.footer-community){--footer:190px}
 .footer:has(.footer-community){transition:gap .4s cubic-bezier(.22,1,.36,1);--community-radius:12px}.footer-community a,.footer:has(.footer-community) .social-link{border-radius:var(--community-radius)}
 @media(max-width:900px){.footer-community__copy{gap:6px;padding-block:6px}.footer-community strong{font-size:18px}}
 @media(prefers-reduced-motion:reduce){.footer:has(.footer-community),.footer-community,.footer--compact .footer-community{transition:none}}
+
+/* Development reels keep their own Instagram player and a direct fallback link. */
+.development-videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,326px),1fr));gap:24px}
+.development-videos figure{min-width:0;margin:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--navy)}
+.development-videos iframe{display:block;width:100%;height:640px;border:0;background:#fff}
+.development-videos figcaption{padding:16px;font-size:13px}
+.development-videos a{color:var(--orange)}
+
+.development-status{margin:24px 0;padding:16px 20px;border:1px solid var(--line);border-radius:12px;background:var(--navy);font-size:13px}
+.development-status>div{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;padding:8px 0}
+.development-status dt{font-weight:800;color:var(--cream)}
+.development-status dd{margin:0;color:var(--muted)}
+.development-status>div:first-child dd{color:var(--orange);font-weight:800}
