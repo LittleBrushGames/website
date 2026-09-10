@@ -217,7 +217,7 @@ html{scrollbar-gutter:stable}
 .casefile-note::before{content:"";position:absolute;top:-5px;left:35%;height:12px;width:32px;background:#d2c0a48c;rotate:-4deg}
 .casefile-note--left{left:4%;bottom:14%;rotate:-9deg}.casefile-note--right{right:3%;top:20%;rotate:8deg}
 .truth-or-mole-page #how{border:0;padding-block:32px 38px}
-.gallery-video video{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;border:1px solid #745b3e;border-radius:13px;background:#061321}
+.gallery-video video{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;border:1px solid #745b3e;border-radius:13px;background:#061321}
 .truth-or-mole-page .steps{gap:14px}
 .truth-or-mole-page .step{padding:20px 20px 20px 62px;border:1px solid #3d4148;border-radius:10px;background:linear-gradient(125deg,#142031,#0a1522);transition:border-color .35s,background .35s}
 .truth-or-mole-page .step__number{position:absolute;left:18px;top:20px;margin:0;background:#ffad460a}
