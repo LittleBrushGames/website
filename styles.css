@@ -217,8 +217,7 @@ html{scrollbar-gutter:stable}
 .casefile-note::before{content:"";position:absolute;top:-5px;left:35%;height:12px;width:32px;background:#d2c0a48c;rotate:-4deg}
 .casefile-note--left{left:4%;bottom:14%;rotate:-9deg}.casefile-note--right{right:3%;top:20%;rotate:8deg}
 .truth-or-mole-page #how{border:0;padding-block:32px 38px}
-.truth-or-mole-page #how .section-heading{margin-bottom:20px}
-.truth-or-mole-page #how .section-heading h2{font-size:23px}
+.gallery-video a{position:relative}.gallery-video img{object-position:center}.video-play{position:absolute;inset:50% auto auto 50%;display:grid;place-items:center;width:58px;height:58px;border-radius:50%;transform:translate(-50%,-50%);background:#ff0033;color:#fff;font-size:23px;line-height:1;box-shadow:0 10px 30px #0009;padding-left:4px}
 .truth-or-mole-page .steps{gap:14px}
 .truth-or-mole-page .step{padding:20px 20px 20px 62px;border:1px solid #3d4148;border-radius:10px;background:linear-gradient(125deg,#142031,#0a1522);transition:border-color .35s,background .35s}
 .truth-or-mole-page .step__number{position:absolute;left:18px;top:20px;margin:0;background:#ffad460a}
@@ -247,7 +246,7 @@ html{scrollbar-gutter:stable}
  .truth-or-mole-page .step{padding:16px}.truth-or-mole-page .step__number{position:static;margin-bottom:12px}
 }
 @media(max-width:700px){
- .project-subnav{min-height:54px}.project-subnav nav{gap:16px}.project-subnav nav a{font-size:11px}.project-subnav nav a:first-child{display:none}
+ .project-subnav{min-height:54px}.project-subnav nav{gap:16px}.project-subnav nav a{font-size:11px}.truth-or-mole-page .project-subnav nav a[href="press-kit/"]{display:none}
  .product-hero--casefile{grid-template-columns:1fr;border-radius:14px}
  .product-hero--casefile .product-hero__copy{padding:25px 24px 0}
  .product-kicker{margin-bottom:20px}.product-kicker img{width:44px;height:44px}
@@ -264,7 +263,6 @@ html{scrollbar-gutter:stable}
  .casefile-scene .phone{border-radius:21px;padding:4px}.casefile-scene .phone img{border-radius:16px}
  .casefile-scene .phone-stage figcaption{font-size:8px;margin-top:10px}
  .casefile-note{display:block;font-size:9px;padding:8px}.casefile-note--left{left:3%;bottom:15%}.casefile-note--right{right:3%;top:22%}
- .truth-or-mole-page #how{padding-block:28px}.truth-or-mole-page #how .section-heading h2{font-size:20px}
  .truth-or-mole-page .steps{gap:10px}.truth-or-mole-page .step{padding:17px 16px 17px 59px}
  .truth-or-mole-page .step__number{position:absolute;top:17px;left:15px;margin:0}
  .truth-or-mole-page .step h3{font-size:13px}.truth-or-mole-page .step p{font-size:12px}
